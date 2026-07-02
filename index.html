@@ -442,6 +442,174 @@ nav.scrolled{
 .ldry-section-hidden{display:none;}
 .ldry-section-active{display:block;}
 
+/* ══ QIBLA SECTION ══ */
+.qibla-section{
+  background:var(--card2);border:1px solid var(--border);
+  margin-bottom:1rem;overflow:hidden;
+}
+.qibla-head{
+  display:flex;align-items:center;gap:.9rem;
+  padding:1rem 1.3rem;cursor:pointer;
+  border-bottom:1px solid rgba(201,168,76,.08);
+  background:rgba(255,255,255,.015);user-select:none;
+}
+.qibla-icon{
+  width:38px;height:38px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,rgba(201,168,76,.14),rgba(154,117,48,.08));
+  border:1px solid rgba(201,168,76,.25);font-size:1.1rem;
+}
+.qibla-title{
+  font-family:'Playfair Display',serif;font-size:1rem;
+  color:var(--gold-l);font-weight:700;flex:1;
+}
+.qibla-arrow{color:var(--text3);font-size:.75rem;transition:transform .3s;}
+.qibla-section.open .qibla-arrow{transform:rotate(180deg);}
+.qibla-body{padding:1.4rem 1.3rem 1.6rem;display:none;}
+.qibla-section.open .qibla-body{display:block;}
+
+.qibla-btn{
+  width:100%;
+  background:linear-gradient(135deg,rgba(201,168,76,.14),rgba(154,117,48,.08));
+  border:1px solid rgba(201,168,76,.35);
+  color:var(--gold-l);padding:1rem 1.4rem;
+  font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.7rem;
+  transition:all .25s;margin-bottom:1.4rem;
+}
+.qibla-btn:hover{background:rgba(201,168,76,.22);border-color:var(--gold);}
+.qibla-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;}
+
+/* compass container */
+.compass-wrap{
+  display:none;flex-direction:column;align-items:center;gap:1.4rem;
+}
+.compass-wrap.visible{display:flex;}
+
+.compass-outer{
+  position:relative;width:270px;height:270px;border-radius:50%;
+  background:conic-gradient(
+    from 0deg,
+    rgba(201,168,76,.06) 0deg,rgba(201,168,76,.16) 45deg,
+    rgba(201,168,76,.04) 90deg,rgba(201,168,76,.16) 135deg,
+    rgba(201,168,76,.04) 180deg,rgba(201,168,76,.16) 225deg,
+    rgba(201,168,76,.04) 270deg,rgba(201,168,76,.16) 315deg,
+    rgba(201,168,76,.06) 360deg
+  );
+  box-shadow:0 0 0 1px rgba(201,168,76,.22),0 0 28px rgba(201,168,76,.1),0 0 55px rgba(0,0,0,.5);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.compass-outer::before{
+  content:'';position:absolute;inset:5px;border-radius:50%;
+  border:1px solid rgba(201,168,76,.18);pointer-events:none;
+}
+
+.compass-ring{
+  position:relative;width:232px;height:232px;border-radius:50%;
+  background:linear-gradient(160deg,rgba(20,30,48,.98),rgba(10,16,26,1));
+  border:1.5px solid rgba(201,168,76,.32);overflow:hidden;flex-shrink:0;
+}
+
+.compass-kaaba-bg{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  opacity:.22;pointer-events:none;z-index:0;
+}
+.compass-kaaba-bg svg{
+  width:115px;height:115px;
+  filter:drop-shadow(0 0 10px rgba(201,168,76,.7));
+}
+
+.compass-ring .c-N,.compass-ring .c-S,
+.compass-ring .c-E,.compass-ring .c-W{
+  position:absolute;z-index:3;
+  font-family:'Playfair Display',serif;
+  font-size:.68rem;font-weight:700;letter-spacing:.06em;
+}
+.compass-ring .c-N{top:8px;left:50%;transform:translateX(-50%);
+  color:var(--gold-l);text-shadow:0 0 8px rgba(201,168,76,.7);}
+.compass-ring .c-S{bottom:8px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.3);}
+.compass-ring .c-E{right:10px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.3);}
+.compass-ring .c-W{left:10px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.3);}
+
+.c-dot{position:absolute;width:3px;height:3px;border-radius:50%;background:rgba(201,168,76,.28);z-index:2;}
+.c-dot.ne{top:16%;left:84%;transform:translate(-50%,-50%);}
+.c-dot.se{bottom:16%;left:84%;transform:translate(-50%,50%);}
+.c-dot.sw{bottom:16%;right:84%;transform:translate(50%,50%);}
+.c-dot.nw{top:16%;right:84%;transform:translate(50%,-50%);}
+
+.compass-needle{
+  position:absolute;top:50%;left:50%;
+  width:5px;height:100px;
+  transform:translate(-50%,-50%) rotate(0deg);
+  transform-origin:50% 50%;
+  transition:transform .8s cubic-bezier(.25,.46,.45,.94);z-index:4;
+}
+.needle-n{
+  position:absolute;top:0;left:0;right:0;bottom:50%;
+  background:linear-gradient(to top,#b03020,#e74c3c,#ff7060);
+  clip-path:polygon(50% 0%,5% 100%,95% 100%);
+  filter:drop-shadow(0 0 5px rgba(231,76,60,.75));
+}
+.needle-s{
+  position:absolute;top:50%;left:0;right:0;bottom:0;
+  background:linear-gradient(to bottom,rgba(255,255,255,.55),rgba(255,255,255,.1));
+  clip-path:polygon(50% 100%,5% 0%,95% 0%);
+}
+.needle-pivot{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:15px;height:15px;border-radius:50%;z-index:6;
+  background:radial-gradient(circle at 38% 35%,var(--gold-l),var(--gold-d));
+  box-shadow:0 0 0 2.5px rgba(201,168,76,.4),0 0 12px rgba(201,168,76,.6);
+}
+
+.qibla-pointer{
+  position:absolute;top:50%;left:50%;
+  width:0;height:0;
+  transform:translate(-50%,-50%) rotate(0deg);
+  transform-origin:50% 50%;
+  transition:transform .8s cubic-bezier(.25,.46,.45,.94) .15s;
+  pointer-events:none;z-index:5;
+}
+.qibla-pointer::before{
+  content:'';position:absolute;
+  top:-96px;left:-3px;
+  width:6px;height:90px;
+  background:linear-gradient(to top,
+    transparent 0%,rgba(201,168,76,.35) 20%,
+    rgba(201,168,76,.88) 65%,var(--gold-l) 100%
+  );
+  clip-path:polygon(50% 0%,0% 100%,100% 100%);
+  filter:drop-shadow(0 0 6px rgba(201,168,76,.85));
+}
+.qibla-tip-emoji{
+  position:absolute;top:-112px;left:50%;transform:translateX(-50%);
+  font-size:1.1rem;line-height:1;
+  filter:drop-shadow(0 0 5px rgba(201,168,76,.9));
+}
+
+.qibla-info{text-align:center;}
+.qibla-info{text-align:center;}
+.qi-angle{
+  font-family:'Cormorant Garamond',serif;font-size:1.6rem;
+  font-weight:700;color:var(--gold-l);margin-bottom:.3rem;
+}
+.qi-desc{font-size:.78rem;color:var(--text3);font-family:'Lato',sans-serif;line-height:1.5;}
+.qibla-error{
+  text-align:center;padding:.8rem 1rem;font-size:.82rem;color:rgba(220,100,100,.8);
+  background:rgba(220,80,80,.06);border:1px solid rgba(220,80,80,.2);display:none;
+}
+.qibla-loading{
+  text-align:center;font-size:.82rem;color:var(--text3);
+  font-family:'Lato',sans-serif;letter-spacing:.06em;display:none;
+  align-items:center;justify-content:center;gap:.5rem;
+}
+.qibla-loading.show{display:flex;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.ql-spinner{
+  width:14px;height:14px;border:2px solid rgba(201,168,76,.3);
+  border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite;
+}
+
 </style>
 </head>
 <body>
@@ -501,6 +669,11 @@ nav.scrolled{
           <span class="txt-fr">👕 Prix de Blanchisserie</span>
           <span class="txt-en">👕 Laundry Prices</span>
         </button>
+        <button class="btn-ghost" onclick="showView('qibla')">
+          <span class="txt-ar">🕌 اتجاه القبلة</span>
+          <span class="txt-fr">🕌 Direction de la Qibla</span>
+          <span class="txt-en">🕌 Qibla Direction</span>
+        </button>
       </div>
     </div>
   </div>
@@ -511,7 +684,10 @@ nav.scrolled{
     <div class="ft-tag">Skikda · Algeria</div>
     <div class="ft-sep"></div>
     <div class="ft-copy">
-         </div>
+      <span class="txt-ar">مطعم بريستيج ✦ بيتزيريا ✦ خدمة الشاطئ</span>
+      <span class="txt-fr">Restaurant Prestige ✦ Pizzeria ✦ Service Plage</span>
+      <span class="txt-en">Restaurant Prestige ✦ Pizzeria ✦ Beach Service</span>
+    </div>
   </footer>
 </div>
 
@@ -939,6 +1115,7 @@ nav.scrolled{
       </div>
     </div>
 
+
     <!-- farewell -->
     <div class="rules-farewell">
       <div class="rf-heart">💙</div>
@@ -967,6 +1144,8 @@ function showView(id) {
 }
 
 /* ══ LANG ══ */
+function getLang(){ return document.documentElement.getAttribute("data-lang") || "fr"; }
+
 function setLang(lang, e) {
   document.documentElement.setAttribute('data-lang', lang);
   document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
@@ -999,7 +1178,7 @@ function copyWifi(){
 const laundryData = {
   men: [
     { fr:'Pantalon',            ar:'بنطلون',                price:500  },
-    { fr:'Robe de chambre',     ar:'روب دو شوميز',          price:500  },
+    { fr:'Robe de chambre',     ar:'روب دي شامبر',          price:500  },
     { fr:'Veste',               ar:'جاكيت',                 price:850  },
     { fr:'Pull-overs',          ar:'بولوفر',                price:450  },
     { fr:'Imperméable',         ar:'معطف واق من المطر',     price:850  },
@@ -1014,8 +1193,8 @@ const laundryData = {
     { fr:'Comb / bleu / salopet',ar:'بدلة عمل / ذرب العمل', price:1600 },
     { fr:'Short',               ar:'بنطلون صغير',           price:500  },
     { fr:'Les gants',           ar:'القفازات',              price:200  },
-    <!-- { fr:'Casquettes/chapeaux', ar:'القبعات',               price:200  }, -->
-    { fr:'Gilet',               ar:'جيلي',                  price:450  },
+    { fr:'Casquettes/chapeaux', ar:'الكسكيات',              price:200  },
+    { fr:'Gilet',               ar:'جيلة',                  price:450  },
   ],
   women: [
     { fr:'Pantalon',            ar:'بنطلون',                price:500  },
@@ -1029,9 +1208,9 @@ const laundryData = {
     { fr:'Pyjama',              ar:'بيجامة',                price:850  },
     { fr:'Chemise',             ar:'قميص',                  price:450  },
     { fr:'Slip',                ar:'سليب',                  price:200  },
-    { fr:'Soutien',             ar:'حمالة صدر',             price:200  },
-    { fr:'Serviette',           ar:'منشفة',                 price:200  },
-    { fr:'Tunique',             ar:'جلباب',                 price:850  },
+    { fr:'Sourien',             ar:'حمالة صدر',             price:200  },
+    { fr:'Serviette',           ar:'مشط',                   price:200  },
+    { fr:'Tunique',             ar:'تونيك',                 price:850  },
     { fr:'Combinaison femme',   ar:'ثوب العمل للمرأة',      price:1700 },
     { fr:'Mouchoirs',           ar:'مناديل',                price:200  },
     { fr:'Chaussettes',         ar:'جوارب',                 price:200  },
@@ -1114,7 +1293,149 @@ document.addEventListener('DOMContentLoaded', ()=>{
   buildLaundryTable('men');
   buildLaundryTable('women');
 });
+/* ══ QIBLA ══ */
+const KAABA_LAT = 21.4225;
+const KAABA_LNG = 39.8262;
+// Hotel Belle Vue Skikda fallback
+const HOTEL_LAT = 36.8820;
+const HOTEL_LNG = 6.9057;
 
+let qiblaAngle = null;
+let deviceHeading = 0;
+let orientationWatcher = null;
+
+function toggleQibla(head){
+  const sec = head.closest('.qibla-section');
+  sec.classList.toggle('open');
+}
+
+function toRad(deg){ return deg * Math.PI / 180; }
+function toDeg(rad){ return rad * 180 / Math.PI; }
+
+function calcQibla(lat, lng){
+  const dLng = toRad(KAABA_LNG - lng);
+  const lat1 = toRad(lat);
+  const lat2 = toRad(KAABA_LAT);
+  const x = Math.sin(dLng) * Math.cos(lat2);
+  const y = Math.cos(lat1)*Math.sin(lat2) - Math.sin(lat1)*Math.cos(lat2)*Math.cos(dLng);
+  return (toDeg(Math.atan2(x, y)) + 360) % 360;
+}
+
+function showCompass(lat, lng, sourceLabel){
+  qiblaAngle = calcQibla(lat, lng);
+  const deg = Math.round(qiblaAngle);
+
+  document.getElementById('qibla-loading').classList.remove('show');
+  // qibla-error removed
+  document.getElementById('qibla-fallback-row').style.display = 'none';
+  document.getElementById('compass-wrap').classList.add('visible');
+  document.getElementById('qi-angle').textContent = deg + '°';
+
+  const lang = getLang();
+  const src = sourceLabel || '';
+  const dirMap = {ar:'جنوب شرق', fr:'Sud-Est', en:'South-East'};
+  const dir = deg > 90 && deg < 180 ? (dirMap[lang]||dirMap.fr) :
+              deg >= 180 && deg < 270 ? (lang==='ar'?'جنوب غرب':lang==='en'?'South-West':'Sud-Ouest') :
+              deg >= 270 ? (lang==='ar'?'شمال غرب':lang==='en'?'North-West':'Nord-Ouest') :
+              (lang==='ar'?'شمال شرق':lang==='en'?'North-East':'Nord-Est');
+
+  const descAr = `${deg}° باتجاه ${dir} ${src}`;
+  const descFr = `${deg}° vers le ${dir} ${src}`;
+  const descEn = `${deg}° towards ${dir} ${src}`;
+  document.getElementById('qi-desc-ar').textContent = descAr;
+  document.getElementById('qi-desc-fr').textContent = descFr;
+  document.getElementById('qi-desc-en').textContent = descEn;
+
+  updateCompass(deviceHeading);
+  startOrientation();
+}
+
+function findQibla(){
+  document.getElementById('qibla-btn').style.display = 'none';
+  document.getElementById('qibla-loading').classList.add('show');
+  // qibla-error removed
+  document.getElementById('compass-wrap').classList.remove('visible');
+
+  if(!navigator.geolocation){
+    useHotelLocation(); return;
+  }
+
+  const timer = setTimeout(useHotelLocation, 8000);
+
+  navigator.geolocation.getCurrentPosition(
+    (pos)=>{
+      clearTimeout(timer);
+      const lang = getLang();
+      const src = lang==='ar'?'(موقعك الحالي)':lang==='en'?'(your location)':'(votre position)';
+      showCompass(pos.coords.latitude, pos.coords.longitude, src);
+    },
+    ()=>{
+      clearTimeout(timer);
+      useHotelLocation();
+    },
+    { timeout: 7000, enableHighAccuracy: false }
+  );
+}
+
+function useHotelLocation(){
+  const lang = getLang();
+  const src = lang==='ar'?'(موقع الفندق)':lang==='en'?'(hotel location)':'(position hôtel)';
+  showCompass(HOTEL_LAT, HOTEL_LNG, src);
+  // show the "use my exact location" retry row
+  document.getElementById('qibla-fallback-row').style.display = 'flex';
+}
+
+function retryGPS(){
+  document.getElementById('qibla-fallback-row').style.display = 'none';
+  document.getElementById('compass-wrap').classList.remove('visible');
+  document.getElementById('qibla-btn').style.display = 'none';
+  document.getElementById('qibla-loading').classList.add('show');
+
+  navigator.geolocation.getCurrentPosition(
+    (pos)=>{
+      const lang = getLang();
+      const src = lang==='ar'?'(موقعك الحالي)':lang==='en'?'(your location)':'(votre position)';
+      showCompass(pos.coords.latitude, pos.coords.longitude, src);
+    },
+    ()=>{
+      const lang = getLang();
+      const src = lang==='ar'?'(موقع الفندق)':lang==='en'?'(hotel location)':'(position hôtel)';
+      showCompass(HOTEL_LAT, HOTEL_LNG, src);
+      document.getElementById('qibla-fallback-row').style.display = 'flex';
+    },
+    { timeout: 7000, enableHighAccuracy: true }
+  );
+}
+
+function updateCompass(heading){
+  deviceHeading = heading;
+  const needleEl = document.getElementById('compass-needle');
+  if(needleEl) needleEl.style.transform = `translate(-50%,-50%) rotate(${-heading}deg)`;
+  if(qiblaAngle !== null){
+    const ptrEl = document.getElementById('qibla-pointer');
+    if(ptrEl) ptrEl.style.transform = `translate(-50%,-50%) rotate(${qiblaAngle - heading}deg)`;
+  }
+}
+
+function startOrientation(){
+  if(orientationWatcher) return;
+  if(typeof DeviceOrientationEvent !== 'undefined' && typeof DeviceOrientationEvent.requestPermission === 'function'){
+    DeviceOrientationEvent.requestPermission().then(s=>{ if(s==='granted') attachOrientation(); }).catch(()=>{});
+  } else {
+    attachOrientation();
+  }
+}
+
+function attachOrientation(){
+  orientationWatcher = (e)=>{
+    let heading = 0;
+    if(e.webkitCompassHeading !== undefined) heading = e.webkitCompassHeading;
+    else if(e.alpha !== null) heading = (360 - e.alpha) % 360;
+    updateCompass(heading);
+  };
+  window.addEventListener('deviceorientationabsolute', orientationWatcher, true);
+  window.addEventListener('deviceorientation', orientationWatcher, true);
+}
 </script>
 <!-- ════════════════ VIEW: LAUNDRY PRICES ════════════════ -->
 <div id="view-laundry" class="view">
@@ -1215,6 +1536,158 @@ document.addEventListener('DOMContentLoaded', ()=>{
         <span class="txt-fr">↺ Réinitialiser</span>
         <span class="txt-en">↺ Reset</span>
       </button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════ VIEW: QIBLA ════════════════ -->
+<div id="view-qibla" class="view">
+  <div class="laundry-wrap" style="max-width:560px;">
+
+    <div style="margin-bottom:1.5rem;">
+      <button class="back-btn" onclick="showView('hero')">
+        <span class="txt-ar">← الصفحة الرئيسية</span>
+        <span class="txt-fr">← Accueil</span>
+        <span class="txt-en">← Home</span>
+      </button>
+    </div>
+
+    <!-- header -->
+    <div class="laundry-hero">
+      <div class="rules-eyebrow">
+        <span class="txt-ar">فندق المنظر الجميل — سكيكدة</span>
+        <span class="txt-fr">Hôtel Belle Vue — Skikda</span>
+        <span class="txt-en">Hotel Belle Vue — Skikda</span>
+      </div>
+      <h1 class="laundry-title">
+        <span class="txt-ar">🕌 اتجاه <span style="background:linear-gradient(135deg,var(--gold-l),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">القبلة</span></span>
+        <span class="txt-fr">🕌 Direction de la <span style="background:linear-gradient(135deg,var(--gold-l),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Qibla</span></span>
+        <span class="txt-en">🕌 <span style="background:linear-gradient(135deg,var(--gold-l),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Qibla</span> Direction</span>
+      </h1>
+      <div class="laundry-sub">
+        <span class="txt-ar">اضغط على الزر لتحديد موقعك واحتساب اتجاه القبلة</span>
+        <span class="txt-fr">Appuyez pour localiser et calculer la direction de la Qibla</span>
+        <span class="txt-en">Tap to locate yourself and find the Qibla direction</span>
+      </div>
+      <div class="rules-ornament" style="margin-top:1rem;">
+        <div class="ro-line"></div><div class="ro-diamond"></div><div class="ro-line r"></div>
+      </div>
+    </div>
+
+    <!-- locate button -->
+    <button class="qibla-btn" id="qibla-btn" onclick="findQibla()">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="3" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21"/><line x1="3" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21" y2="12"/><circle cx="12" cy="12" r="2"/></svg>
+      <span class="txt-ar">📍 تحديد موقعي واحتساب اتجاه القبلة</span>
+      <span class="txt-fr">📍 Me localiser & calculer la direction</span>
+      <span class="txt-en">📍 Locate me & find Qibla direction</span>
+    </button>
+
+    <!-- loading -->
+    <div class="qibla-loading" id="qibla-loading">
+      <div class="ql-spinner"></div>
+      <span class="txt-ar">جاري تحديد الموقع…</span>
+      <span class="txt-fr">Localisation en cours…</span>
+      <span class="txt-en">Getting location…</span>
+    </div>
+
+    <!-- fallback notice -->
+    <div id="qibla-fallback-row" style="display:none;align-items:center;justify-content:space-between;gap:.8rem;margin-bottom:1.2rem;padding:.65rem 1rem;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.22);font-size:.72rem;color:var(--text3);font-family:'Lato',sans-serif;">
+      <span>
+        <span class="txt-ar">📍 تم استخدام موقع الفندق — اضغط للحصول على موقعك الدقيق</span>
+        <span class="txt-fr">📍 Position de l'hôtel utilisée — Appuyez pour votre position exacte</span>
+        <span class="txt-en">📍 Hotel location used — Tap for your exact position</span>
+      </span>
+      <button onclick="retryGPS()" style="flex-shrink:0;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.4);color:var(--gold-l);padding:.4rem .85rem;font-family:'Lato',sans-serif;font-size:.65rem;font-weight:700;cursor:pointer;white-space:nowrap;letter-spacing:.05em;transition:all .2s;">
+        <span class="txt-ar">تحديد موقعي</span>
+        <span class="txt-fr">Me localiser</span>
+        <span class="txt-en">Locate me</span>
+      </button>
+    </div>
+
+    <!-- compass -->
+    <div class="compass-wrap" id="compass-wrap">
+
+      <div class="compass-outer">
+        <div class="compass-ring" id="compass-ring">
+
+          <!-- Kaaba SVG background watermark -->
+          <div class="compass-kaaba-bg">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <!-- Kaaba cube -->
+              <rect x="18" y="35" width="64" height="52" fill="rgba(201,168,76,.9)" rx="1"/>
+              <!-- dark left face -->
+              <polygon points="18,35 8,22 8,74 18,87" fill="rgba(150,120,50,.7)"/>
+              <!-- top face -->
+              <polygon points="18,35 8,22 72,22 82,35" fill="rgba(220,190,80,.5)"/>
+              <!-- Kiswah (black cloth with gold band) -->
+              <rect x="18" y="35" width="64" height="52" fill="rgba(0,0,0,.85)" rx="1"/>
+              <!-- gold band -->
+              <rect x="18" y="52" width="64" height="8" fill="rgba(201,168,76,.7)"/>
+              <!-- arabic calligraphy hint -->
+              <rect x="24" y="54" width="52" height="4" fill="rgba(0,0,0,.4)" rx="1"/>
+              <!-- door -->
+              <rect x="40" y="62" width="20" height="25" fill="rgba(201,168,76,.6)" rx="1"/>
+              <rect x="42" y="64" width="16" height="21" fill="rgba(150,110,30,.5)" rx="1"/>
+              <!-- top dark face -->
+              <polygon points="18,35 8,22 72,22 82,35" fill="rgba(0,0,0,.75)"/>
+              <!-- gold top edge -->
+              <polyline points="18,35 82,35" stroke="rgba(201,168,76,.8)" stroke-width="1.5" fill="none"/>
+              <!-- Maqam Ibrahim hint (small square) -->
+              <rect x="50" y="80" width="8" height="6" fill="rgba(201,168,76,.25)" rx=".5"/>
+              <!-- tawaf circle suggestion -->
+              <circle cx="50" cy="60" r="36" fill="none" stroke="rgba(201,168,76,.08)" stroke-width="1" stroke-dasharray="3 4"/>
+            </svg>
+          </div>
+
+          <!-- cardinal directions -->
+          <span class="c-N">N</span>
+          <span class="c-S">S</span>
+          <span class="c-E">E</span>
+          <span class="c-W">W</span>
+
+          <!-- intercardinal dots -->
+          <span class="c-dot ne"></span>
+          <span class="c-dot se"></span>
+          <span class="c-dot sw"></span>
+          <span class="c-dot nw"></span>
+
+          <!-- north needle -->
+          <div class="compass-needle" id="compass-needle">
+            <div class="needle-n"></div>
+            <div class="needle-s"></div>
+          </div>
+          <div class="needle-pivot"></div>
+
+          <!-- qibla golden pointer -->
+          <div class="qibla-pointer" id="qibla-pointer">
+            <span class="qibla-tip-emoji">🕋</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="qibla-info">
+        <div class="qi-angle" id="qi-angle">—°</div>
+        <div class="qi-desc">
+          <span class="txt-ar" id="qi-desc-ar">اتجاه القبلة من الشمال الجغرافي</span>
+          <span class="txt-fr" id="qi-desc-fr">Depuis le Nord géographique</span>
+          <span class="txt-en" id="qi-desc-en">From true North</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- legend -->
+    <div style="display:flex;gap:1.4rem;justify-content:center;margin-top:1rem;font-size:.7rem;color:var(--text3);font-family:'Lato',sans-serif;flex-wrap:wrap;">
+      <span style="display:flex;align-items:center;gap:.4rem;">
+        <span style="width:12px;height:12px;border-radius:50%;background:var(--red-l);display:inline-block;"></span>
+        <span class="txt-ar">الشمال</span><span class="txt-fr">Nord</span><span class="txt-en">North</span>
+      </span>
+      <span style="display:flex;align-items:center;gap:.4rem;">
+        <span style="font-size:.9rem;">🕋</span>
+        <span class="txt-ar">اتجاه القبلة</span><span class="txt-fr">Direction Qibla</span><span class="txt-en">Qibla direction</span>
+      </span>
     </div>
 
   </div>
