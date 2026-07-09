@@ -647,7 +647,7 @@ nav.scrolled{
 
     <div class="hero-vignette"></div>
     <div class="hero-content" style="z-index:5;">
-      <div class="hero-badge">Restaurant Prestige · Pizzeria · Skikda</div>
+      
       <h1 class="hero-title">
         <span class="txt-ar">فندق المنظر<br><span class="gline">الجميل</span></span>
         <span class="txt-fr">Hôtel<br><span class="gline">Belle Vue</span></span>
@@ -729,7 +729,7 @@ nav.scrolled{
     <!-- ① معلومات عامة -->
     <div class="rules-section open">
       <div class="rs-head" onclick="toggleSection(this)">
-        <div class="rs-icon">📌</div>
+        <div class="rs-icon">🏢</div>
         <div class="rs-title">
           <span class="txt-ar">معلومات عامة</span>
           <span class="txt-fr">Informations Générales</span>
@@ -738,94 +738,300 @@ nav.scrolled{
         <span class="rs-arrow">▼</span>
       </div>
       <div class="rs-body">
-        <div class="rule-item">
-          <span class="ri-icon">🚭</span>
-          <span class="ri-text">
-            <span class="txt-ar">يمنع التدخين داخل الغرف</span>
-            <span class="txt-fr">Il est interdit de fumer à l'intérieur des chambres</span>
-            <span class="txt-en">Smoking is strictly prohibited inside the rooms</span>
-          </span>
+
+        <!-- welcome note -->
+        <div style="padding:.85rem 1rem;margin-bottom:1.1rem;background:linear-gradient(135deg,rgba(201,168,76,.07),rgba(154,117,48,.03));border:1px solid rgba(201,168,76,.2);border-right:3px solid var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.82rem;color:var(--text2);line-height:1.7;">
+          <span class="txt-ar">أهلاً وسهلاً بكم في فندق المنظر الجميل — يُسعدنا استقبالكم ونتمنى لكم إقامة مريحة ومميزة</span>
+          <span class="txt-fr">Bienvenue à l'Hôtel Belle Vue — Nous sommes ravis de vous accueillir et vous souhaitons un séjour agréable et mémorable</span>
+          <span class="txt-en">Welcome to Hotel Belle Vue — We are delighted to welcome you and wish you a comfortable and memorable stay</span>
         </div>
-        <div class="rule-item">
-          <span class="ri-icon">🐶</span>
-          <span class="ri-text">
-            <span class="txt-ar">يمنع إدخال الحيوانات الأليفة</span>
-            <span class="txt-fr">Les animaux de compagnie ne sont pas admis</span>
-            <span class="txt-en">Pets are not allowed on the premises</span>
-          </span>
+
+        <!-- info cards 2×2 -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.55rem;margin-bottom:.6rem;">
+
+          <!-- no smoking -->
+          <div style="position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(22,34,52,.97),rgba(14,22,36,.99));border:1px solid rgba(192,57,43,.25);padding:.85rem .9rem;">
+            <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#c0392b,#e74c3c,#c0392b);opacity:.65;"></div>
+            <div style="font-size:1.5rem;margin-bottom:.4rem;">🚭</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;color:var(--text);margin-bottom:.28rem;">
+              <span class="txt-ar">منطقة غير مدخّنة</span>
+              <span class="txt-fr">Espace Non-Fumeur</span>
+              <span class="txt-en">No Smoking Area</span>
+            </div>
+            <div style="font-size:.68rem;color:var(--text3);line-height:1.5;">
+              <span class="txt-ar">يُمنع التدخين منعًا باتًّا داخل جميع غرف الفندق وممراته</span>
+              <span class="txt-fr">Il est strictement interdit de fumer dans toutes les chambres et couloirs de l'hôtel</span>
+              <span class="txt-en">Smoking is strictly forbidden in all hotel rooms and corridors</span>
+            </div>
+          </div>
+
+          <!-- no pets -->
+          <div style="position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(22,34,52,.97),rgba(14,22,36,.99));border:1px solid rgba(192,57,43,.25);padding:.85rem .9rem;">
+            <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#c0392b,#e74c3c,#c0392b);opacity:.65;"></div>
+            <div style="font-size:1.5rem;margin-bottom:.4rem;">🐾</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;color:var(--text);margin-bottom:.28rem;">
+              <span class="txt-ar">ممنوع الحيوانات الأليفة</span>
+              <span class="txt-fr">Animaux Interdits</span>
+              <span class="txt-en">No Pets Allowed</span>
+            </div>
+            <div style="font-size:.68rem;color:var(--text3);line-height:1.5;">
+              <span class="txt-ar">لا يُسمح بإدخال أي حيوان أليف داخل الفندق حرصًا على راحة جميع النزلاء</span>
+              <span class="txt-fr">Aucun animal de compagnie n'est admis dans l'hôtel pour le confort de tous les clients</span>
+              <span class="txt-en">No pets are permitted inside the hotel out of respect for all guests</span>
+            </div>
+          </div>
+
+          <!-- door lock -->
+          <div style="position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(22,34,52,.97),rgba(14,22,36,.99));border:1px solid rgba(201,168,76,.2);padding:.85rem .9rem;">
+            <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold-d),var(--gold-l),var(--gold-d));opacity:.5;"></div>
+            <div style="font-size:1.5rem;margin-bottom:.4rem;">🔐</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;color:var(--text);margin-bottom:.28rem;">
+              <span class="txt-ar">أمان الغرفة</span>
+              <span class="txt-fr">Sécurité de la Chambre</span>
+              <span class="txt-en">Room Security</span>
+            </div>
+            <div style="font-size:.68rem;color:var(--text3);line-height:1.5;">
+              <span class="txt-ar">تأكد من إغلاق باب غرفتك جيدًا عند كل مغادرة — أمانتك أمانتنا</span>
+              <span class="txt-fr">Assurez-vous de bien fermer la porte à chaque départ — votre sécurité est notre priorité</span>
+              <span class="txt-en">Ensure your door is properly locked each time you leave — your safety is our priority</span>
+            </div>
+          </div>
+
+          <!-- quiet hours -->
+          <div style="position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(22,34,52,.97),rgba(14,22,36,.99));border:1px solid rgba(142,68,173,.2);padding:.85rem .9rem;">
+            <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#8e44ad,#a569bd,#8e44ad);opacity:.55;"></div>
+            <div style="font-size:1.5rem;margin-bottom:.4rem;">🔕</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;color:var(--text);margin-bottom:.28rem;">
+              <span class="txt-ar">ساعات الهدوء</span>
+              <span class="txt-fr">Heures de Silence</span>
+              <span class="txt-en">Quiet Hours</span>
+            </div>
+            <div style="font-size:.68rem;color:var(--text3);line-height:1.5;">
+              <span class="txt-ar">يُرجى الالتزام بالهدوء بعد الساعة 22:00 احترامًا لراحة النزلاء</span>
+              <span class="txt-fr">Veuillez respecter le calme après 22h00 par égard pour tous les clients</span>
+              <span class="txt-en">Please maintain quiet after 10:00 PM out of respect for all guests</span>
+            </div>
+          </div>
+
         </div>
-        <div class="rule-item">
-          <span class="ri-icon">🔐</span>
-          <span class="ri-text">
-            <span class="txt-ar">يرجى التأكد من غلق الباب جيدًا عند مغادرة الغرفة</span>
-            <span class="txt-fr">Veuillez vous assurer de bien fermer la porte en quittant votre chambre</span>
-            <span class="txt-en">Please ensure the door is properly locked when leaving your room</span>
-          </span>
+
+        <!-- single full-width card: responsibility -->
+        <div style="display:flex;align-items:center;gap:.8rem;padding:.8rem 1rem;background:linear-gradient(135deg,rgba(201,168,76,.06),rgba(14,22,36,.98));border:1px solid rgba(201,168,76,.18);">
+          <span style="font-size:1.1rem;flex-shrink:0;">🏅</span>
+          <div style="font-size:.75rem;color:var(--text2);line-height:1.65;font-family:'Cormorant Garamond',serif;font-style:italic;">
+            <span class="txt-ar">الفندق غير مسؤول عن فقدان أي غرض ثمين لم يُودَع في الخزانة الأمنية — يُرجى الاستعانة بها دائماً</span>
+            <span class="txt-fr">L'hôtel décline toute responsabilité pour les objets de valeur non déposés dans le coffre-fort — veuillez toujours l'utiliser</span>
+            <span class="txt-en">The hotel is not liable for any valuables not deposited in the in-room safe — please always make use of it</span>
+          </div>
         </div>
+
       </div>
     </div>
-
     <!-- ② أوقات الدخول والمغادرة -->
     <div class="rules-section open">
       <div class="rs-head" onclick="toggleSection(this)">
         <div class="rs-icon">⏰</div>
         <div class="rs-title">
           <span class="txt-ar">أوقات الدخول والمغادرة</span>
-          <span class="txt-fr">Check-in / Check-out</span>
-          <span class="txt-en">Check-in / Check-out</span>
+          <span class="txt-fr">Arrivée & Départ</span>
+          <span class="txt-en">Check-in & Check-out</span>
         </div>
         <span class="rs-arrow">▼</span>
       </div>
       <div class="rs-body">
-        <div class="time-grid">
-          <div class="time-card">
-            <div class="tc-label"><span class="txt-ar">الدخول</span><span class="txt-fr">Arrivée</span><span class="txt-en">Check-in</span></div>
-            <div class="tc-time">15:00</div>
-            <div class="tc-desc"><span class="txt-ar">ابتداءً من الساعة 15:00</span><span class="txt-fr">À partir de 15h00</span><span class="txt-en">From 3:00 PM</span></div>
+
+        <!-- two cards side by side -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:1rem;">
+
+          <!-- CHECK-IN -->
+          <div style="position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(22,34,52,.97),rgba(14,22,36,.99));border:1px solid rgba(94,201,140,.28);text-align:center;padding:1.3rem .9rem 1.1rem;">
+            <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#3a9d6a,#5ec98c,#3a9d6a);"></div>
+            <div style="font-size:1.6rem;margin-bottom:.5rem;">🛬</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.72rem;font-weight:700;color:var(--text3);letter-spacing:.12em;text-transform:uppercase;font-family:'Lato',sans-serif;margin-bottom:.5rem;">
+              <span class="txt-ar">الدخول</span>
+              <span class="txt-fr">Arrivée</span>
+              <span class="txt-en">Check-in</span>
+            </div>
+            <div style="font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;line-height:1;background:linear-gradient(135deg,#7ac9a0,#5ec98c,#3a9d6a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;" dir="ltr">15:00</div>
+            <div style="font-size:.68rem;color:var(--text3);margin-top:.45rem;line-height:1.5;">
+              <span class="txt-ar">ابتداءً من الساعة الثالثة مساءً</span>
+              <span class="txt-fr">À partir de 15 heures</span>
+              <span class="txt-en">From 3:00 PM onwards</span>
+            </div>
+            <div style="display:inline-flex;align-items:center;gap:.3rem;margin-top:.6rem;padding:.2rem .65rem;background:rgba(94,201,140,.1);border:1px solid rgba(94,201,140,.25);font-size:.58rem;font-family:'Lato',sans-serif;color:#5ec98c;letter-spacing:.07em;">
+              ✦ <span class="txt-ar">الغرفة جاهزة</span><span class="txt-fr">Chambre prête</span><span class="txt-en">Room ready</span>
+            </div>
           </div>
-          <div class="time-card">
-            <div class="tc-label"><span class="txt-ar">المغادرة</span><span class="txt-fr">Départ</span><span class="txt-en">Check-out</span></div>
-            <div class="tc-time">11:00</div>
-            <div class="tc-desc"><span class="txt-ar">قبل الساعة 11:00 صباحًا</span><span class="txt-fr">Avant 11h00</span><span class="txt-en">Before 11:00 AM</span></div>
+
+          <!-- CHECK-OUT -->
+          <div style="position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(22,34,52,.97),rgba(14,22,36,.99));border:1px solid rgba(192,57,43,.28);text-align:center;padding:1.3rem .9rem 1.1rem;">
+            <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#c0392b,#e74c3c,#c0392b);"></div>
+            <div style="font-size:1.6rem;margin-bottom:.5rem;">🛫</div>
+            <div style="font-size:.72rem;font-weight:700;color:var(--text3);letter-spacing:.12em;text-transform:uppercase;font-family:'Lato',sans-serif;margin-bottom:.5rem;">
+              <span class="txt-ar">المغادرة</span>
+              <span class="txt-fr">Départ</span>
+              <span class="txt-en">Check-out</span>
+            </div>
+            <div style="font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;line-height:1;background:linear-gradient(135deg,#ec7063,#e74c3c,#c0392b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;" dir="ltr">11:00</div>
+            <div style="font-size:.68rem;color:var(--text3);margin-top:.45rem;line-height:1.5;">
+              <span class="txt-ar">قبل الحادية عشرة صباحًا</span>
+              <span class="txt-fr">Avant 11 heures du matin</span>
+              <span class="txt-en">Before 11:00 AM</span>
+            </div>
+            <div style="display:inline-flex;align-items:center;gap:.3rem;margin-top:.6rem;padding:.2rem .65rem;background:rgba(192,57,43,.1);border:1px solid rgba(192,57,43,.25);font-size:.58rem;font-family:'Lato',sans-serif;color:#e74c3c;letter-spacing:.07em;">
+              ✦ <span class="txt-ar">تسليم المفاتيح</span><span class="txt-fr">Remise des clés</span><span class="txt-en">Key handover</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- early / late tips -->
+        <div style="display:flex;flex-direction:column;gap:.4rem;margin-bottom:.8rem;">
+          <div style="display:flex;align-items:center;gap:.7rem;padding:.65rem .9rem;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.18);">
+            <span style="font-size:.95rem;flex-shrink:0;">⏳</span>
+            <div style="font-size:.73rem;color:var(--text3);line-height:1.5;">
+              <span class="txt-ar">في حال وصولكم مبكرًا، يمكنكم إيداع أمتعتكم لدى الاستقبال وإخطاركم عند جهوز الغرفة</span>
+              <span class="txt-fr">En cas d'arrivée anticipée, vous pouvez déposer vos bagages à la réception et serez avertis dès que la chambre est prête</span>
+              <span class="txt-en">If arriving early, you may leave your luggage at reception and will be notified as soon as the room is ready</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:.7rem;padding:.65rem .9rem;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.18);">
+            <span style="font-size:.95rem;flex-shrink:0;">🧳</span>
+            <div style="font-size:.73rem;color:var(--text3);line-height:1.5;">
+              <span class="txt-ar">بعد تسليم الغرفة يمكن إيداع أمتعتكم لدى الاستقبال حتى موعد مغادرتكم النهائي</span>
+              <span class="txt-fr">Après le check-out, vos bagages peuvent être gardés à la réception jusqu'à votre départ définitif</span>
+              <span class="txt-en">After checkout, your luggage can be stored at reception until your final departure</span>
+            </div>
           </div>
         </div>
+
+        <!-- reception note -->
+        <div style="display:flex;align-items:center;gap:.7rem;padding:.7rem .9rem;background:linear-gradient(135deg,rgba(201,168,76,.07),rgba(14,22,36,.98));border:1px solid rgba(201,168,76,.2);">
+          <span style="font-size:1rem;flex-shrink:0;">📞</span>
+          <div style="font-size:.73rem;color:var(--text3);line-height:1.5;">
+            <span class="txt-ar">للاستفسار أو أي مساعدة يرجى الاتصال بالاستقبال على الرقم <strong style="color:var(--gold-l);">9</strong></span>
+            <span class="txt-fr">Pour tout renseignement ou assistance, contactez la réception au <strong style="color:var(--gold-l);">9</strong></span>
+            <span class="txt-en">For any enquiry or assistance, contact reception at <strong style="color:var(--gold-l);">9</strong></span>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <!-- ③ المصعد -->
-    <div class="rules-section">
+    <div class="rules-section open">
       <div class="rs-head" onclick="toggleSection(this)">
         <div class="rs-icon">🛗</div>
         <div class="rs-title">
-          <span class="txt-ar">استخدام المصعد</span>
-          <span class="txt-fr">Utilisation de l'Ascenseur</span>
+          <span class="txt-ar">دليل المصعد</span>
+          <span class="txt-fr">Guide de l'Ascenseur</span>
           <span class="txt-en">Elevator Guide</span>
         </div>
         <span class="rs-arrow">▼</span>
       </div>
       <div class="rs-body">
-        <div class="rule-item">
-          <span class="ri-icon">🏛️</span>
-          <span class="ri-text">
-            <strong><span class="txt-ar">الطابق 0</span><span class="txt-fr">Niveau 0</span><span class="txt-en">Level 0</span></strong>
-            — <span class="txt-ar">الاستقبال</span><span class="txt-fr">Réception</span><span class="txt-en">Reception</span>
-          </span>
+
+        <p style="font-size:.78rem;color:var(--text3);line-height:1.7;margin-bottom:1.1rem;font-family:'Cormorant Garamond',serif;font-style:italic;border-right:2px solid rgba(201,168,76,.28);padding-right:.8rem;">
+          <span class="txt-ar">المصعد يخدم جميع طوابق الفندق — اضغط على الزر المناسب للوجهة التي تريد</span>
+          <span class="txt-fr">L'ascenseur dessert tous les étages — appuyez sur le bouton correspondant à votre destination</span>
+          <span class="txt-en">The elevator serves all hotel floors — press the button corresponding to your destination</span>
+        </p>
+
+        <!-- floor cards -->
+        <div style="display:flex;flex-direction:column;gap:.45rem;margin-bottom:1rem;">
+
+          <!-- floor 0 -->
+          <div style="display:flex;align-items:center;gap:0;overflow:hidden;border:1px solid rgba(201,168,76,.25);background:linear-gradient(135deg,rgba(22,34,52,.97),rgba(14,22,36,.99));">
+            <div style="flex-shrink:0;display:flex;align-items:center;justify-content:center;width:54px;min-height:58px;background:linear-gradient(160deg,rgba(201,168,76,.18),rgba(154,117,48,.1));border-left:1px solid rgba(201,168,76,.2);">
+              <div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;background:linear-gradient(135deg,var(--gold-l),var(--gold),var(--gold-d));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;" dir="ltr">0</div>
+            </div>
+            <div style="width:3px;min-height:58px;background:linear-gradient(to bottom,var(--gold-l),var(--gold-d));flex-shrink:0;"></div>
+            <div style="flex:1;padding:.75rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:.8rem;">
+              <div>
+                <div style="display:flex;align-items:center;gap:.45rem;margin-bottom:.18rem;">
+                  <span style="font-size:1rem;">🏛️</span>
+                  <span style="font-family:'Playfair Display',serif;font-size:.85rem;font-weight:700;color:var(--text);">
+                    <span class="txt-ar">الاستقبال</span>
+                    <span class="txt-fr">Réception</span>
+                    <span class="txt-en">Reception</span>
+                  </span>
+                </div>
+                <div style="font-size:.68rem;color:var(--text3);">
+                  <span class="txt-ar">المدخل الرئيسي — الاستقبال — المدخل</span>
+                  <span class="txt-fr">Entrée principale · Réception · Hall</span>
+                  <span class="txt-en">Main entrance · Reception · Lobby</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- floor -2 (1er) -->
+          <div style="display:flex;align-items:center;gap:0;overflow:hidden;border:1px solid rgba(232,149,90,.22);background:linear-gradient(135deg,rgba(22,34,52,.97),rgba(14,22,36,.99));">
+            <div style="flex-shrink:0;display:flex;align-items:center;justify-content:center;width:54px;min-height:58px;background:linear-gradient(160deg,rgba(232,149,90,.1),rgba(180,80,20,.06));border-left:1px solid rgba(232,149,90,.15);">
+              <div style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;background:linear-gradient(135deg,#f0b060,#e8955a,#c0642a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;" dir="ltr">-2</div>
+            </div>
+            <div style="width:3px;min-height:58px;background:linear-gradient(to bottom,#f0b060,#c0642a);flex-shrink:0;"></div>
+            <div style="flex:1;padding:.75rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:.8rem;">
+              <div>
+                <div style="display:flex;align-items:center;gap:.45rem;margin-bottom:.18rem;">
+                  <span style="font-size:1rem;">🍽️</span>
+                  <span style="font-family:'Playfair Display',serif;font-size:.85rem;font-weight:700;color:var(--text);">
+                    <span class="txt-ar">المطعم</span>
+                    <span class="txt-fr">Restaurant</span>
+                    <span class="txt-en">Restaurant</span>
+                  </span>
+                </div>
+                <div style="font-size:.68rem;color:var(--text3);">
+                  <span class="txt-ar">المطعم الرئيسي · قاعة الطعام · المطبخ</span>
+                  <span class="txt-fr">Restaurant principal · Salle à manger · Cuisine</span>
+                  <span class="txt-en">Main restaurant · Dining room · Kitchen</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- floor -1 (2ème) -->
+          <div style="display:flex;align-items:center;gap:0;overflow:hidden;border:1px solid rgba(41,128,185,.22);background:linear-gradient(135deg,rgba(22,34,52,.97),rgba(14,22,36,.99));">
+            <div style="flex-shrink:0;display:flex;align-items:center;justify-content:center;width:54px;min-height:58px;background:linear-gradient(160deg,rgba(41,128,185,.12),rgba(20,60,100,.08));border-left:1px solid rgba(41,128,185,.15);">
+              <div style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;background:linear-gradient(135deg,#7ec8e3,#5dade2,#2980b9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;" dir="ltr">-1</div>
+            </div>
+            <div style="width:3px;min-height:58px;background:linear-gradient(to bottom,#7ec8e3,#2980b9);flex-shrink:0;"></div>
+            <div style="flex:1;padding:.75rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:.8rem;">
+              <div>
+                <div style="display:flex;align-items:center;gap:.45rem;margin-bottom:.18rem;">
+                  <span style="font-size:1rem;">🏊</span>
+                  <span style="font-family:'Playfair Display',serif;font-size:.85rem;font-weight:700;color:var(--text);">
+                    <span class="txt-ar">المسبح وقاعة الاجتماعات</span>
+                    <span class="txt-fr">Piscine & Salle de Réunion</span>
+                    <span class="txt-en">Pool & Meeting Room</span>
+                  </span>
+                </div>
+                <div style="font-size:.68rem;color:var(--text3);">
+                  <span class="txt-ar">المسبح · قاعة الاجتماعات · غرف الخدمات</span>
+                  <span class="txt-fr">Piscine · Salle de réunion · Locaux de service</span>
+                  <span class="txt-en">Pool · Meeting room · Service rooms</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
         </div>
-        <div class="rule-item">
-          <span class="ri-icon">🏊</span>
-          <span class="ri-text">
-            <strong>-1</strong> — <span class="txt-ar">المسبح وقاعة الاجتماعات</span><span class="txt-fr">Piscine & Salle de réunion</span><span class="txt-en">Pool & Meeting room</span>
-          </span>
+
+        <!-- elevator tip -->
+        <div style="display:flex;align-items:flex-start;gap:.65rem;padding:.75rem .9rem;background:rgba(192,57,43,.05);border:1px solid rgba(192,57,43,.2);">
+          <span style="font-size:.9rem;flex-shrink:0;margin-top:.05rem;">🚨</span>
+          <div style="font-size:.73rem;color:var(--text3);line-height:1.55;">
+            <span class="txt-ar">في حالات الطوارئ <strong style="color:rgba(220,100,100,.9);">لا تستخدم المصعد أبدًا</strong> — اتجه مباشرةً لمخرج الطوارئ في نهاية الممر</span>
+            <span class="txt-fr">En cas d'urgence <strong style="color:rgba(220,100,100,.9);">n'utilisez jamais l'ascenseur</strong> — dirigez-vous directement vers la sortie de secours au bout du couloir</span>
+            <span class="txt-en">In emergencies <strong style="color:rgba(220,100,100,.9);">never use the elevator</strong> — head directly to the emergency exit at the end of the corridor</span>
+          </div>
         </div>
-        <div class="rule-item">
-          <span class="ri-icon">🍽️</span>
-          <span class="ri-text">
-            <strong>-2</strong> — <span class="txt-ar">المطعم</span><span class="txt-fr">Restaurant</span><span class="txt-en">Restaurant</span>
-          </span>
-        </div>
+
       </div>
     </div>
-
     <!-- ④ أوقات المطعم -->
     <div class="rules-section open">
       <div class="rs-head" onclick="toggleSection(this)">
@@ -838,35 +1044,146 @@ nav.scrolled{
         <span class="rs-arrow">▼</span>
       </div>
       <div class="rs-body">
-        <div class="rule-item">
-          <span class="ri-icon">☕</span>
-          <span class="ri-text">
-            <strong><span class="txt-ar">فطور الصباح</span><span class="txt-fr">Petit-déjeuner</span><span class="txt-en">Breakfast</span></strong>
-            — 06:00 → 10:00
-          </span>
+
+        <!-- timeline bar -->
+        <div style="margin-bottom:1.3rem;">
+          <div style="position:relative;height:10px;background:rgba(255,255,255,.06);border-radius:5px;margin-bottom:.5rem;overflow:hidden;" dir="ltr">
+            <!-- breakfast 06-10: 4h of 16h span = 25% from left 0% -->
+            <div style="position:absolute;top:0;left:0%;height:100%;width:25%;background:linear-gradient(90deg,#f39c12,#f1c40f);border-radius:5px 0 0 5px;"></div>
+            <!-- lunch 12-16: 4h from 37.5% = 6h from start -->
+            <div style="position:absolute;top:0;left:37.5%;height:100%;width:25%;background:linear-gradient(90deg,#e8955a,#e67e22);"></div>
+            <!-- dinner 19-22: 3h from 81.25% = 13h from start -->
+            <div style="position:absolute;top:0;left:81.25%;height:100%;width:18.75%;background:linear-gradient(90deg,#8e44ad,#a569bd);border-radius:0 5px 5px 0;"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-family:'Lato',sans-serif;font-size:.56rem;color:var(--text3);letter-spacing:.04em;" dir="ltr">
+            <span>06:00</span><span>10:00</span><span style="opacity:.4">12:00</span><span>16:00</span><span style="opacity:.4">19:00</span><span>22:00</span>
+          </div>
         </div>
-        <div class="rule-item">
-          <span class="ri-icon">🍴</span>
-          <span class="ri-text">
-            <strong><span class="txt-ar">الغداء</span><span class="txt-fr">Déjeuner</span><span class="txt-en">Lunch</span></strong>
-            — 12:00 → 15:00
-          </span>
+
+        <!-- meal cards -->
+        <div style="display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.2rem;">
+
+          <!-- BREAKFAST -->
+          <div style="position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(243,156,18,.08),rgba(14,22,36,.99));border:1px solid rgba(243,156,18,.28);">
+            <div style="position:absolute;top:0;left:0;bottom:0;width:4px;background:linear-gradient(to bottom,#f1c40f,#f39c12,#d68910);"></div>
+            <div style="display:flex;align-items:stretch;">
+
+              <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.9rem 1rem .9rem 1.3rem;background:rgba(243,156,18,.06);border-left:1px solid rgba(243,156,18,.15);" dir="ltr">
+                <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1;background:linear-gradient(135deg,#f7dc6f,#f39c12,#d68910);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">06<span style="font-size:.65rem;opacity:.7">h</span></div>
+                <div style="font-size:.5rem;color:rgba(243,156,18,.4);font-family:'Lato',sans-serif;margin:.15rem 0;">—</div>
+                <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1;background:linear-gradient(135deg,#f7dc6f,#f39c12,#d68910);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">10<span style="font-size:.65rem;opacity:.7">h</span></div>
+                <div style="font-size:.52rem;color:var(--text3);font-family:'Lato',sans-serif;margin-top:.2rem;letter-spacing:.05em;">4H</div>
+              </div>
+
+              <div style="flex:1;padding:.85rem 1rem;">
+                <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.28rem;">
+                  <span style="font-size:1.25rem;">☕</span>
+                  <div style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:var(--text);">
+                    <span class="txt-ar">فطور الصباح</span>
+                    <span class="txt-fr">Petit-Déjeuner</span>
+                    <span class="txt-en">Breakfast</span>
+                  </div>
+                </div>
+                <div style="font-size:.72rem;color:var(--text3);line-height:1.55;margin-bottom:.45rem;">
+                  <span class="txt-ar">انطلق في يومك بوجبة فطور متكاملة تجمع بين المنتجات الطازجة والأصيلة في أجواء مريحة وهادئة</span>
+                  <span class="txt-fr">Commencez votre journée avec un petit-déjeuner complet alliant produits frais et authentiques dans une atmosphère paisible</span>
+                  <span class="txt-en">Start your day with a complete breakfast combining fresh and authentic produce in a peaceful and relaxing setting</span>
+                </div>
+                <div style="display:flex;gap:.4rem;flex-wrap:wrap;">
+                  <span style="display:inline-flex;align-items:center;gap:.25rem;padding:.18rem .55rem;background:rgba(243,156,18,.09);border:1px solid rgba(243,156,18,.22);font-size:.58rem;font-family:'Lato',sans-serif;color:#f39c12;">🥐 <span class="txt-ar">بوفيه متنوع</span><span class="txt-fr">Buffet varié</span><span class="txt-en">Varied buffet</span></span>
+                  <span style="display:inline-flex;align-items:center;gap:.25rem;padding:.18rem .55rem;background:rgba(243,156,18,.09);border:1px solid rgba(243,156,18,.22);font-size:.58rem;font-family:'Lato',sans-serif;color:#f39c12;">☕ <span class="txt-ar">مشروبات ساخنة</span><span class="txt-fr">Boissons chaudes</span><span class="txt-en">Hot drinks</span></span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- LUNCH -->
+          <div style="position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(230,126,34,.08),rgba(14,22,36,.99));border:1px solid rgba(230,126,34,.28);">
+            <div style="position:absolute;top:0;left:0;bottom:0;width:4px;background:linear-gradient(to bottom,#f0a060,#e8955a,#c0642a);"></div>
+            <div style="display:flex;align-items:stretch;">
+
+              <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.9rem 1rem .9rem 1.3rem;background:rgba(230,126,34,.06);border-left:1px solid rgba(230,126,34,.15);" dir="ltr">
+                <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1;background:linear-gradient(135deg,#f0b860,#e8955a,#c0642a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">12<span style="font-size:.65rem;opacity:.7">h</span></div>
+                <div style="font-size:.5rem;color:rgba(230,126,34,.4);font-family:'Lato',sans-serif;margin:.15rem 0;">—</div>
+                <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1;background:linear-gradient(135deg,#f0b860,#e8955a,#c0642a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">16<span style="font-size:.65rem;opacity:.7">h</span></div>
+                <div style="font-size:.52rem;color:var(--text3);font-family:'Lato',sans-serif;margin-top:.2rem;letter-spacing:.05em;">4H</div>
+              </div>
+
+              <div style="flex:1;padding:.85rem 1rem;">
+                <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.28rem;">
+                  <span style="font-size:1.25rem;">🍴</span>
+                  <div style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:var(--text);">
+                    <span class="txt-ar">الغداء</span>
+                    <span class="txt-fr">Déjeuner</span>
+                    <span class="txt-en">Lunch</span>
+                  </div>
+                </div>
+                <div style="font-size:.72rem;color:var(--text3);line-height:1.55;margin-bottom:.45rem;">
+                  <span class="txt-ar">استمتع بوجبة غداء شهية من أشهى الأطباق الجزائرية والمتوسطية المُعدّة بعناية فائقة من قِبل طاقمنا</span>
+                  <span class="txt-fr">Savourez un déjeuner appétissant parmi les meilleurs plats algériens et méditerranéens soigneusement préparés</span>
+                  <span class="txt-en">Enjoy a delicious lunch from the finest Algerian and Mediterranean dishes carefully crafted by our team</span>
+                </div>
+                <div style="display:flex;gap:.4rem;flex-wrap:wrap;">
+                  <span style="display:inline-flex;align-items:center;gap:.25rem;padding:.18rem .55rem;background:rgba(230,126,34,.09);border:1px solid rgba(230,126,34,.22);font-size:.58rem;font-family:'Lato',sans-serif;color:#e8955a;">🍲 <span class="txt-ar">أطباق متنوعة</span><span class="txt-fr">Plats variés</span><span class="txt-en">Varied dishes</span></span>
+                  <span style="display:inline-flex;align-items:center;gap:.25rem;padding:.18rem .55rem;background:rgba(230,126,34,.09);border:1px solid rgba(230,126,34,.22);font-size:.58rem;font-family:'Lato',sans-serif;color:#e8955a;">🥗 <span class="txt-ar">سلطات طازجة</span><span class="txt-fr">Salades fraîches</span><span class="txt-en">Fresh salads</span></span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- DINNER -->
+          <div style="position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(142,68,173,.08),rgba(14,22,36,.99));border:1px solid rgba(142,68,173,.28);">
+            <div style="position:absolute;top:0;left:0;bottom:0;width:4px;background:linear-gradient(to bottom,#a569bd,#8e44ad,#6c3483);"></div>
+            <div style="display:flex;align-items:stretch;">
+
+              <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.9rem 1rem .9rem 1.3rem;background:rgba(142,68,173,.06);border-left:1px solid rgba(142,68,173,.15);" dir="ltr">
+                <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1;background:linear-gradient(135deg,#c39bd3,#a569bd,#8e44ad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">19<span style="font-size:.65rem;opacity:.7">h</span></div>
+                <div style="font-size:.5rem;color:rgba(142,68,173,.4);font-family:'Lato',sans-serif;margin:.15rem 0;">—</div>
+                <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1;background:linear-gradient(135deg,#c39bd3,#a569bd,#8e44ad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">22<span style="font-size:.65rem;opacity:.7">h</span></div>
+                <div style="font-size:.52rem;color:var(--text3);font-family:'Lato',sans-serif;margin-top:.2rem;letter-spacing:.05em;">3H</div>
+              </div>
+
+              <div style="flex:1;padding:.85rem 1rem;">
+                <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.28rem;">
+                  <span style="font-size:1.25rem;">🌙</span>
+                  <div style="font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:var(--text);">
+                    <span class="txt-ar">العشاء</span>
+                    <span class="txt-fr">Dîner</span>
+                    <span class="txt-en">Dinner</span>
+                  </div>
+                </div>
+                <div style="font-size:.72rem;color:var(--text3);line-height:1.55;margin-bottom:.45rem;">
+                  <span class="txt-ar">أنهِ يومك بعشاء فاخر في أجواء هادئة وراقية — قائمة طعام غنية تُرضي جميع الأذواق في أناقة متميزة</span>
+                  <span class="txt-fr">Terminez votre journée par un dîner raffiné dans une atmosphère calme et élégante — menu riche pour tous les goûts</span>
+                  <span class="txt-en">End your day with a refined dinner in a calm and elegant atmosphere — a rich menu to satisfy all tastes in style</span>
+                </div>
+                <div style="display:flex;gap:.4rem;flex-wrap:wrap;">
+                  <span style="display:inline-flex;align-items:center;gap:.25rem;padding:.18rem .55rem;background:rgba(142,68,173,.09);border:1px solid rgba(142,68,173,.22);font-size:.58rem;font-family:'Lato',sans-serif;color:#a569bd;">🍷 <span class="txt-ar">أجواء هادئة</span><span class="txt-fr">Ambiance feutrée</span><span class="txt-en">Intimate setting</span></span>
+                  <span style="display:inline-flex;align-items:center;gap:.25rem;padding:.18rem .55rem;background:rgba(142,68,173,.09);border:1px solid rgba(142,68,173,.22);font-size:.58rem;font-family:'Lato',sans-serif;color:#a569bd;">✨ <span class="txt-ar">أطباق مميزة</span><span class="txt-fr">Plats signature</span><span class="txt-en">Signature dishes</span></span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
         </div>
-        <div class="rule-item">
-          <span class="ri-icon">🌙</span>
-          <span class="ri-text">
-            <strong><span class="txt-ar">العشاء</span><span class="txt-fr">Dîner</span><span class="txt-en">Dinner</span></strong>
-            — 19:00 → 22:00
-          </span>
+
+
+
+        <!-- ambiance note -->
+        <div style="display:flex;align-items:flex-start;gap:.65rem;padding:.8rem 1rem;background:linear-gradient(135deg,rgba(201,168,76,.06),rgba(14,22,36,.98));border:1px solid rgba(201,168,76,.2);">
+          <span style="font-size:1rem;flex-shrink:0;margin-top:.05rem;">🏅</span>
+          <div style="font-size:.76rem;color:var(--text2);line-height:1.65;font-family:'Cormorant Garamond',serif;font-style:italic;">
+            <span class="txt-ar">نحرص على تقديم وجبات متنوعة بعناية فائقة لتلبية جميع الأذواق، في أجواء راقية تجمع بين الراحة والاحترافية</span>
+            <span class="txt-fr">Nous proposons des repas variés préparés avec soin pour satisfaire tous les goûts, dans une atmosphère élégante alliant confort et professionnalisme</span>
+            <span class="txt-en">We offer carefully prepared varied meals to satisfy all tastes, in an elegant atmosphere combining comfort and professionalism</span>
+          </div>
         </div>
-        <div style="margin-top:.8rem;padding:.7rem .9rem;background:rgba(201,168,76,.06);border-right:2px solid var(--gold);font-size:.82rem;color:var(--text3);line-height:1.6;font-style:italic;">
-          <span class="txt-ar">نحرص على تقديم وجبات متنوعة بعناية فائقة لتلبية جميع الأذواق، مع توفير أجواء راقية تجمع بين الراحة والاحترافية.</span>
-          <span class="txt-fr">Nous proposons des repas variés préparés avec soin, dans une atmosphère raffinée alliant confort et professionnalisme.</span>
-          <span class="txt-en">We offer a diverse selection of carefully prepared meals in an elegant setting that blends comfort and professionalism.</span>
-        </div>
+
       </div>
     </div>
-
     <!-- ⑤ أوقات المسبح -->
     <div class="rules-section open">
       <div class="rs-head" onclick="toggleSection(this)">
@@ -879,177 +1196,791 @@ nav.scrolled{
         <span class="rs-arrow">▼</span>
       </div>
       <div class="rs-body">
-        <div class="rule-item">
-          <span class="ri-icon">👨‍👩‍👧‍👦</span>
-          <span class="ri-text">
-            <strong>09:00 → 18:00</strong>
-            — <span class="txt-ar">مخصص للعائلات فقط</span><span class="txt-fr">Réservé aux familles uniquement</span><span class="txt-en">Families only</span>
-          </span>
+
+        <!-- visual timeline -->
+        <div style="position:relative;margin-bottom:1.4rem;">
+
+          <!-- timeline bar -->
+          <div style="position:relative;height:10px;background:rgba(255,255,255,.06);border-radius:5px;margin:0 0 .5rem;overflow:hidden;">
+            <!-- families: 09-18 = 9h of 12h = 75% width from 0% -->
+            <div style="position:absolute;top:0;left:0;height:100%;width:75%;background:linear-gradient(90deg,#2980b9,#5dade2);border-radius:5px 0 0 5px;"></div>
+            <!-- men: 18-21 = 3h = 25% width from 75% -->
+            <div style="position:absolute;top:0;left:75%;height:100%;width:25%;background:linear-gradient(90deg,#1a5276,#2e86c1);border-radius:0 5px 5px 0;"></div>
+          </div>
+
+          <!-- time labels below bar -->
+          <div style="display:flex;justify-content:space-between;font-family:'Lato',sans-serif;font-size:.58rem;color:var(--text3);letter-spacing:.05em;padding:0 0 .2rem;">
+            <span>09:00</span>
+            <span style="margin-left:auto;margin-right:0;">18:00</span>
+            <span style="margin-right:0;">21:00</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-family:'Lato',sans-serif;font-size:.52rem;color:var(--text3);opacity:.5;letter-spacing:.04em;">
+            <span class="txt-ar">الفتح</span><span class="txt-fr">Ouverture</span><span class="txt-en">Opens</span>
+            <span class="txt-ar">التبديل</span><span class="txt-fr">Relève</span><span class="txt-en">Switch</span>
+            <span class="txt-ar">الإغلاق</span><span class="txt-fr">Fermeture</span><span class="txt-en">Closes</span>
+          </div>
+
         </div>
-        <div class="rule-item">
-          <span class="ri-icon">👨</span>
-          <span class="ri-text">
-            <strong>18:00 → 21:00</strong>
-            — <span class="txt-ar">مخصص للرجال فقط</span><span class="txt-fr">Réservé aux hommes uniquement</span><span class="txt-en">Men only</span>
-          </span>
+
+        <!-- session cards -->
+        <div style="display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.2rem;">
+
+          <!-- FAMILIES -->
+          <div style="position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(26,107,138,.12),rgba(14,22,36,.99));border:1px solid rgba(41,128,185,.3);">
+            <div style="position:absolute;top:0;left:0;bottom:0;width:4px;background:linear-gradient(to bottom,#5dade2,#2980b9,#1a5276);"></div>
+            <div style="display:flex;align-items:stretch;gap:0;">
+
+              <!-- time block -->
+              <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.9rem 1.1rem .9rem 1.4rem;background:rgba(41,128,185,.07);border-left:1px solid rgba(41,128,185,.15);" dir="ltr">
+                <div style="font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;line-height:1;background:linear-gradient(135deg,#7ec8e3,#5dade2,#2980b9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">09<span style="font-size:.7rem;opacity:.7">h</span></div>
+                <div style="font-size:.55rem;color:rgba(93,173,226,.5);font-family:'Lato',sans-serif;margin:.2rem 0;">—</div>
+                <div style="font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;line-height:1;background:linear-gradient(135deg,#7ec8e3,#5dade2,#2980b9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">18<span style="font-size:.7rem;opacity:.7">h</span></div>
+                <div style="font-size:.55rem;color:var(--text3);font-family:'Lato',sans-serif;margin-top:.25rem;letter-spacing:.06em;">9H</div>
+              </div>
+
+              <!-- info block -->
+              <div style="flex:1;padding:.9rem 1rem;">
+                <div style="display:flex;align-items:center;gap:.55rem;margin-bottom:.3rem;">
+                  <span style="font-size:1.4rem;">👨‍👩‍👧‍👦</span>
+                  <div style="font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;color:var(--text);">
+                    <span class="txt-ar">جلسة العائلات</span>
+                    <span class="txt-fr">Session Familles</span>
+                    <span class="txt-en">Family Session</span>
+                  </div>
+                </div>
+                <div style="font-size:.73rem;color:var(--text3);line-height:1.55;margin-bottom:.5rem;">
+                  <span class="txt-ar">أجواء هادئة وراقية تجمع بين الأناقة والترفيه العائلي</span>
+                  <span class="txt-fr">Une atmosphère feutrée et raffinée alliant élégance et convivialité familiale</span>
+                  <span class="txt-en">A serene and sophisticated atmosphere blending elegance with family leisure</span>
+                </div>
+                <div style="display:inline-flex;align-items:center;gap:.35rem;padding:.22rem .6rem;background:rgba(41,128,185,.1);border:1px solid rgba(93,173,226,.25);font-size:.6rem;font-family:'Lato',sans-serif;letter-spacing:.07em;color:#7ec8e3;">
+                  ✦ <span class="txt-ar">للعائلات فقط</span><span class="txt-fr">Familles uniquement</span><span class="txt-en">Families only</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- MEN -->
+          <div style="position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(26,82,118,.12),rgba(14,22,36,.99));border:1px solid rgba(30,90,130,.3);">
+            <div style="position:absolute;top:0;left:0;bottom:0;width:4px;background:linear-gradient(to bottom,#2e86c1,#1a5276,#154360);"></div>
+            <div style="display:flex;align-items:stretch;gap:0;">
+
+              <!-- time block -->
+              <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.9rem 1.1rem .9rem 1.4rem;background:rgba(26,82,118,.08);border-left:1px solid rgba(30,90,130,.15);" dir="ltr">
+                <div style="font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;line-height:1;background:linear-gradient(135deg,#5dade2,#2e86c1,#1a5276);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">18<span style="font-size:.7rem;opacity:.7">h</span></div>
+                <div style="font-size:.55rem;color:rgba(46,134,193,.5);font-family:'Lato',sans-serif;margin:.2rem 0;">—</div>
+                <div style="font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;line-height:1;background:linear-gradient(135deg,#5dade2,#2e86c1,#1a5276);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">21<span style="font-size:.7rem;opacity:.7">h</span></div>
+                <div style="font-size:.55rem;color:var(--text3);font-family:'Lato',sans-serif;margin-top:.25rem;letter-spacing:.06em;">3H</div>
+              </div>
+
+              <!-- info block -->
+              <div style="flex:1;padding:.9rem 1rem;">
+                <div style="display:flex;align-items:center;gap:.55rem;margin-bottom:.3rem;">
+                  <span style="font-size:1.4rem;">🧔</span>
+                  <div style="font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;color:var(--text);">
+                    <span class="txt-ar">جلسة الرجال</span>
+                    <span class="txt-fr">Session Hommes</span>
+                    <span class="txt-en">Men's Session</span>
+                  </div>
+                </div>
+                <div style="font-size:.73rem;color:var(--text3);line-height:1.55;margin-bottom:.5rem;">
+                  <span class="txt-ar">مخصص للرجال فقط في أجواء هادئة ومريحة</span>
+                  <span class="txt-fr">Réservé aux hommes dans une atmosphère calme et apaisante</span>
+                  <span class="txt-en">Reserved exclusively for men in a calm and relaxing atmosphere</span>
+                </div>
+                <div style="display:inline-flex;align-items:center;gap:.35rem;padding:.22rem .6rem;background:rgba(26,82,118,.12);border:1px solid rgba(46,134,193,.22);font-size:.6rem;font-family:'Lato',sans-serif;letter-spacing:.07em;color:#5dade2;">
+                  ✦ <span class="txt-ar">للرجال فقط</span><span class="txt-fr">Hommes uniquement</span><span class="txt-en">Men only</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
         </div>
-        <div style="margin-top:.7rem;font-size:.8rem;color:var(--text3);font-style:italic;">
-          🙏 <span class="txt-ar">نشكركم على احترام هذه الأوقات حرصًا على راحتكم وراحة جميع ضيوفنا.</span>
-          <span class="txt-fr">Nous vous remercions de respecter ces horaires dans l'intérêt de tous nos clients.</span>
-          <span class="txt-en">We thank you for respecting these hours for the comfort of all our guests.</span>
+
+        <!-- pool rules row -->
+        <div style="margin-bottom:.8rem;">
+          <div style="font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-family:'Lato',sans-serif;margin-bottom:.55rem;">
+            <span class="txt-ar">⚠ قواعد المسبح</span>
+            <span class="txt-fr">⚠ Règles de la Piscine</span>
+            <span class="txt-en">⚠ Pool Rules</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.4rem;">
+
+            <div style="display:flex;align-items:center;gap:.55rem;padding:.6rem .75rem;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-right:2px solid rgba(93,173,226,.3);">
+              <span style="font-size:1rem;flex-shrink:0;">🩳</span>
+              <span style="font-size:.7rem;color:var(--text3);line-height:1.4;">
+                <span class="txt-ar">ملابس السباحة اللائقة إلزامية</span>
+                <span class="txt-fr">Tenue de bain correcte obligatoire</span>
+                <span class="txt-en">Appropriate swimwear mandatory</span>
+              </span>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:.55rem;padding:.6rem .75rem;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-right:2px solid rgba(93,173,226,.3);">
+              <span style="font-size:1rem;flex-shrink:0;">💧</span>
+              <span style="font-size:.7rem;color:var(--text3);line-height:1.4;">
+                <span class="txt-ar">استحمام قبل الدخول إلزامي</span>
+                <span class="txt-fr">Douche avant d'entrée obligatoire</span>
+                <span class="txt-en">Shower before entering required</span>
+              </span>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:.55rem;padding:.6rem .75rem;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-right:2px solid rgba(192,57,43,.3);">
+              <span style="font-size:1rem;flex-shrink:0;">🍽️</span>
+              <span style="font-size:.7rem;color:var(--text3);line-height:1.4;">
+                <span class="txt-ar">يُمنع إدخال الطعام إلى منطقة المسبح</span>
+                <span class="txt-fr">Nourriture interdite dans la zone piscine</span>
+                <span class="txt-en">No food allowed in the pool area</span>
+              </span>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:.55rem;padding:.6rem .75rem;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-right:2px solid rgba(201,168,76,.3);">
+              <span style="font-size:1rem;flex-shrink:0;">🧒</span>
+              <span style="font-size:.7rem;color:var(--text3);line-height:1.4;">
+                <span class="txt-ar">الأطفال تحت إشراف ولي الأمر دائماً</span>
+                <span class="txt-fr">Enfants sous surveillance parentale constante</span>
+                <span class="txt-en">Children under parental supervision always</span>
+              </span>
+            </div>
+
+          </div>
         </div>
+
+        <!-- courtesy -->
+        <div style="display:flex;align-items:flex-start;gap:.65rem;padding:.8rem 1rem;background:linear-gradient(135deg,rgba(41,128,185,.06),rgba(14,22,36,.98));border:1px solid rgba(41,128,185,.18);">
+          <span style="font-size:1rem;flex-shrink:0;margin-top:.05rem;">🙏</span>
+          <div style="font-size:.76rem;color:var(--text3);line-height:1.65;font-family:'Cormorant Garamond',serif;font-style:italic;">
+            <span class="txt-ar">نشكركم على الالتزام بهذه الأوقات والقواعد حرصًا على راحتكم وراحة جميع ضيوف الفندق الكرام</span>
+            <span class="txt-fr">Nous vous remercions de respecter ces horaires et règles dans l'intérêt du confort de tous nos précieux clients</span>
+            <span class="txt-en">Thank you for respecting these hours and rules for the comfort of all our valued hotel guests</span>
+          </div>
+        </div>
+
       </div>
     </div>
-
     <!-- ⑥ الخزنة -->
-    <div class="rules-section">
+    <div class="rules-section open">
       <div class="rs-head" onclick="toggleSection(this)">
-        <div class="rs-icon">🗄️</div>
+        <div class="rs-icon">🔒</div>
         <div class="rs-title">
-          <span class="txt-ar">الخزنة الأمنية (إلزامية)</span>
-          <span class="txt-fr">Coffre-fort (Obligatoire)</span>
-          <span class="txt-en">Safe Box (Mandatory)</span>
+          <span class="txt-ar">الخزانة الأمنية</span>
+          <span class="txt-fr">Coffre-Fort Sécurisé</span>
+          <span class="txt-en">In-Room Safe</span>
         </div>
         <span class="rs-arrow">▼</span>
       </div>
       <div class="rs-body">
-        <div class="rule-item">
-          <span class="ri-icon">⚠️</span>
-          <span class="ri-text">
-            <span class="txt-ar">استعمال الخزنة <strong>إلزامي</strong> لحفظ الأغراض الثمينة. الفندق غير مسؤول عن أي غرض ثمين لم يتم وضعه داخل الخزانة.</span>
-            <span class="txt-fr">L'utilisation du coffre est <strong>obligatoire</strong> pour les objets de valeur. L'hôtel décline toute responsabilité pour les objets non déposés.</span>
-            <span class="txt-en">Use of the safe is <strong>mandatory</strong> for valuables. The hotel bears no responsibility for items not placed inside.</span>
-          </span>
-        </div>
-        <div class="safe-steps">
-          <div class="safe-step">
-            <div class="ss-num">1</div>
-            <div class="ss-text">
-              <span class="txt-ar">للإغلاق: أغلق الباب، أدخل الرقم السري، ثم اضغط على زر الإدخال</span>
-              <span class="txt-fr">Pour fermer : fermez la porte, saisissez votre code, puis appuyez sur la touche entrée</span>
-              <span class="txt-en">To lock: close the door, enter your code, then press the confirm button</span>
-            </div>
-          </div>
-          <div class="safe-step">
-            <div class="ss-num">2</div>
-            <div class="ss-text">
-              <span class="txt-ar">للفتح: أدخل نفس الرقم السري، يفتح الباب مباشرة</span>
-              <span class="txt-fr">Pour ouvrir : saisissez le même code, la porte s'ouvre automatiquement</span>
-              <span class="txt-en">To open: enter the same code — the door opens immediately</span>
-            </div>
+
+        <!-- mandatory banner -->
+        <div style="display:flex;align-items:center;gap:.75rem;padding:.8rem 1rem;margin-bottom:1.2rem;background:linear-gradient(135deg,rgba(192,57,43,.08),rgba(192,57,43,.04));border:1px solid rgba(192,57,43,.3);border-right:3px solid #c0392b;">
+          <span style="font-size:1.2rem;flex-shrink:0;">⚠️</span>
+          <div style="font-size:.78rem;line-height:1.6;">
+            <strong style="display:block;color:rgba(230,110,100,.95);font-family:'Playfair Display',serif;font-size:.82rem;margin-bottom:.15rem;">
+              <span class="txt-ar">الاستخدام إلزامي لجميع الأغراض الثمينة</span>
+              <span class="txt-fr">Utilisation obligatoire pour tous les objets de valeur</span>
+              <span class="txt-en">Mandatory use for all valuables</span>
+            </strong>
+            <span style="color:var(--text3);">
+              <span class="txt-ar">الفندق غير مسؤول عن أي غرض ثمين لم يُودَع داخل الخزانة الأمنية</span>
+              <span class="txt-fr">L'hôtel décline toute responsabilité pour les objets de valeur non déposés dans le coffre</span>
+              <span class="txt-en">The hotel bears no responsibility for valuables not placed inside the safe</span>
+            </span>
           </div>
         </div>
+
+        <!-- how to use -->
+        <div style="display:flex;flex-direction:column;gap:.6rem;margin-bottom:.8rem;">
+
+          <!-- LOCK -->
+          <div style="background:linear-gradient(135deg,rgba(192,57,43,.06),rgba(14,22,36,.98));border:1px solid rgba(192,57,43,.22);overflow:hidden;">
+            <div style="display:flex;align-items:center;gap:.6rem;padding:.7rem 1rem;border-bottom:1px solid rgba(192,57,43,.15);background:rgba(192,57,43,.06);">
+              <span style="font-size:1rem;">🔐</span>
+              <span style="font-family:'Playfair Display',serif;font-size:.82rem;font-weight:700;color:rgba(230,110,100,.95);">
+                <span class="txt-ar">الإغلاق</span>
+                <span class="txt-fr">Fermeture</span>
+                <span class="txt-en">Locking</span>
+              </span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0;padding:.3rem 0;">
+
+              <div style="display:flex;align-items:center;gap:.8rem;padding:.6rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);">
+                <div style="flex-shrink:0;width:22px;height:22px;border-radius:50%;background:rgba(192,57,43,.18);border:1px solid rgba(192,57,43,.4);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800;color:rgba(230,110,100,.9);font-family:'Lato',sans-serif;">1</div>
+                <span style="font-size:.8rem;color:var(--text2);line-height:1.45;">
+                  <span class="txt-ar">ضع أغراضك داخل الخزانة</span>
+                  <span class="txt-fr">Placez vos effets dans le coffre</span>
+                  <span class="txt-en">Place your belongings inside the safe</span>
+                </span>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:.8rem;padding:.6rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);">
+                <div style="flex-shrink:0;width:22px;height:22px;border-radius:50%;background:rgba(192,57,43,.18);border:1px solid rgba(192,57,43,.4);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800;color:rgba(230,110,100,.9);font-family:'Lato',sans-serif;">2</div>
+                <span style="font-size:.8rem;color:var(--text2);line-height:1.45;">
+                  <span class="txt-ar">أغلق الباب</span>
+                  <span class="txt-fr">Fermez la porte</span>
+                  <span class="txt-en">Close the door</span>
+                </span>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:.8rem;padding:.6rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);">
+                <div style="flex-shrink:0;width:22px;height:22px;border-radius:50%;background:rgba(192,57,43,.18);border:1px solid rgba(192,57,43,.4);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800;color:rgba(230,110,100,.9);font-family:'Lato',sans-serif;">3</div>
+                <span style="font-size:.8rem;color:var(--text2);line-height:1.45;">
+                  <span class="txt-ar">أدخل الرقم السري الذي اخترته</span>
+                  <span class="txt-fr">Saisissez le code secret de votre choix</span>
+                  <span class="txt-en">Enter the secret code of your choice</span>
+                </span>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:.8rem;padding:.6rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);">
+                <div style="flex-shrink:0;width:22px;height:22px;border-radius:50%;background:rgba(192,57,43,.18);border:1px solid rgba(192,57,43,.4);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800;color:rgba(230,110,100,.9);font-family:'Lato',sans-serif;">4</div>
+                <span style="font-size:.8rem;color:var(--text2);line-height:1.45;">
+                  <span class="txt-ar">اضغط على زر الإغلاق</span>
+                  <span class="txt-fr">Appuyez sur le bouton de verrouillage</span>
+                  <span class="txt-en">Press the lock button</span>
+                </span>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:.8rem;padding:.6rem 1rem;">
+                <div style="flex-shrink:0;width:22px;height:22px;border-radius:50%;background:rgba(192,57,43,.18);border:1px solid rgba(192,57,43,.4);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800;color:rgba(230,110,100,.9);font-family:'Lato',sans-serif;">✓</div>
+                <span style="font-size:.8rem;color:rgba(94,201,140,.85);line-height:1.45;font-style:italic;">
+                  <span class="txt-ar">يُغلق الباب مباشرةً ✔</span>
+                  <span class="txt-fr">La porte se verrouille immédiatement ✔</span>
+                  <span class="txt-en">The door locks immediately ✔</span>
+                </span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- UNLOCK -->
+          <div style="background:linear-gradient(135deg,rgba(58,157,106,.06),rgba(14,22,36,.98));border:1px solid rgba(58,157,106,.22);overflow:hidden;">
+            <div style="display:flex;align-items:center;gap:.6rem;padding:.7rem 1rem;border-bottom:1px solid rgba(58,157,106,.15);background:rgba(58,157,106,.06);">
+              <span style="font-size:1rem;">🔓</span>
+              <span style="font-family:'Playfair Display',serif;font-size:.82rem;font-weight:700;color:#5ec98c;">
+                <span class="txt-ar">الفتح</span>
+                <span class="txt-fr">Ouverture</span>
+                <span class="txt-en">Unlocking</span>
+              </span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0;padding:.3rem 0;">
+
+              <div style="display:flex;align-items:center;gap:.8rem;padding:.6rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);">
+                <div style="flex-shrink:0;width:22px;height:22px;border-radius:50%;background:rgba(58,157,106,.15);border:1px solid rgba(94,201,140,.35);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800;color:#5ec98c;font-family:'Lato',sans-serif;">1</div>
+                <span style="font-size:.8rem;color:var(--text2);line-height:1.45;">
+                  <span class="txt-ar">أدخل الرقم السري الذي اخترته عند الإغلاق</span>
+                  <span class="txt-fr">Saisissez le code secret choisi lors de la fermeture</span>
+                  <span class="txt-en">Enter the secret code you chose when locking</span>
+                </span>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:.8rem;padding:.6rem 1rem;">
+                <div style="flex-shrink:0;width:22px;height:22px;border-radius:50%;background:rgba(58,157,106,.15);border:1px solid rgba(94,201,140,.35);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800;color:#5ec98c;font-family:'Lato',sans-serif;">✓</div>
+                <span style="font-size:.8rem;color:rgba(94,201,140,.85);line-height:1.45;font-style:italic;">
+                  <span class="txt-ar">يفتح الباب مباشرةً ✔</span>
+                  <span class="txt-fr">La porte s'ouvre immédiatement ✔</span>
+                  <span class="txt-en">The door opens immediately ✔</span>
+                </span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- tip -->
+        <div style="display:flex;align-items:flex-start;gap:.65rem;padding:.75rem .9rem;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.18);">
+          <span style="font-size:1rem;flex-shrink:0;margin-top:.05rem;">💡</span>
+          <div style="font-size:.75rem;color:var(--text3);line-height:1.6;font-family:'Cormorant Garamond',serif;font-style:italic;">
+            <span class="txt-ar">في حال نسيان الرقم السري يرجى الاتصال بالاستقبال على الرقم <strong style="color:var(--gold-l);">9</strong></span>
+            <span class="txt-fr">En cas d'oubli du code, contactez la réception au <strong style="color:var(--gold-l);">9</strong></span>
+            <span class="txt-en">If you forget the code, contact reception at <strong style="color:var(--gold-l);">9</strong></span>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <!-- ⑦ الخدمات -->
-    <div class="rules-section">
+    <div class="rules-section open">
       <div class="rs-head" onclick="toggleSection(this)">
-        <div class="rs-icon">🧹</div>
+        <div class="rs-icon">✨</div>
         <div class="rs-title">
-          <span class="txt-ar">الخدمات المتوفرة</span>
-          <span class="txt-fr">Services Disponibles</span>
-          <span class="txt-en">Available Services</span>
+          <span class="txt-ar">خدماتنا لراحتكم</span>
+          <span class="txt-fr">Nos Services à Votre Disposition</span>
+          <span class="txt-en">Our Services at Your Disposal</span>
         </div>
         <span class="rs-arrow">▼</span>
       </div>
       <div class="rs-body">
-        <div class="rule-item">
-          <span class="ri-icon">🧹</span>
-          <span class="ri-text">
-            <span class="txt-ar">تنظيف يومي من 09:00 إلى 15:00</span>
-            <span class="txt-fr">Nettoyage quotidien de 09h00 à 15h00</span>
-            <span class="txt-en">Daily cleaning from 09:00 to 15:00</span>
-          </span>
+
+        <p style="font-size:.8rem;color:var(--text3);line-height:1.7;margin-bottom:1.2rem;font-family:'Cormorant Garamond',serif;font-style:italic;border-right:2px solid rgba(201,168,76,.3);padding-right:.8rem;">
+          <span class="txt-ar">نحرص في فندق المنظر الجميل على توفير مجموعة متكاملة من الخدمات الفندقية الراقية لضمان إقامة مريحة ولا تُنسى</span>
+          <span class="txt-fr">À l'Hôtel Belle Vue, nous veillons à offrir une gamme complète de services hôteliers pour un séjour confortable et inoubliable</span>
+          <span class="txt-en">At Hotel Belle Vue, we ensure a complete range of premium services to guarantee a comfortable and unforgettable stay</span>
+        </p>
+
+        <!-- row 1: 3 cols -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.55rem;margin-bottom:.55rem;">
+
+          <!-- تنظيف الغرف -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.97),rgba(14,22,36,.99));border:1px solid rgba(201,168,76,.2);padding:.85rem .8rem;position:relative;overflow:hidden;text-align:center;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold-d),var(--gold-l),var(--gold-d));opacity:.55;"></div>
+            <div style="font-size:1.6rem;margin-bottom:.4rem;">🧹</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.72rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">
+              <span class="txt-ar">تنظيف يومي</span>
+              <span class="txt-fr">Ménage Quotidien</span>
+              <span class="txt-en">Daily Cleaning</span>
+            </div>
+            <div style="font-size:.65rem;color:var(--text3);line-height:1.45;margin-bottom:.4rem;">
+              <span class="txt-ar">تنظيف شامل يومي لغرفتكم وتغيير البياضات</span>
+              <span class="txt-fr">Nettoyage complet et changement du linge</span>
+              <span class="txt-en">Full daily room clean and linen change</span>
+            </div>
+            <div style="display:inline-flex;align-items:center;gap:.25rem;padding:.18rem .5rem;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.22);font-size:.57rem;font-family:'Lato',sans-serif;letter-spacing:.07em;color:var(--gold);">
+              ⏰ 09:00 – 15:00
+            </div>
+          </div>
+
+          <!-- الاستقبال 24/7 -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.97),rgba(14,22,36,.99));border:1px solid rgba(94,201,140,.2);padding:.85rem .8rem;position:relative;overflow:hidden;text-align:center;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,#3a9d6a,#5ec98c,#3a9d6a);opacity:.6;"></div>
+            <div style="font-size:1.6rem;margin-bottom:.4rem;">🛎️</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.72rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">
+              <span class="txt-ar">استقبال دائم</span>
+              <span class="txt-fr">Réception Permanente</span>
+              <span class="txt-en">24/7 Reception</span>
+            </div>
+            <div style="font-size:.65rem;color:var(--text3);line-height:1.45;margin-bottom:.4rem;">
+              <span class="txt-ar">فريقنا في خدمتكم على مدار الساعة طوال أيام الأسبوع</span>
+              <span class="txt-fr">Notre équipe à votre service tous les jours, à toute heure</span>
+              <span class="txt-en">Our team at your service around the clock every day</span>
+            </div>
+            <div style="display:inline-flex;align-items:center;gap:.25rem;padding:.18rem .5rem;background:rgba(94,201,140,.08);border:1px solid rgba(94,201,140,.22);font-size:.57rem;font-family:'Lato',sans-serif;letter-spacing:.07em;color:#5ec98c;">
+              ✦ 24 / 7
+            </div>
+          </div>
+
+          <!-- موقف السيارات -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.97),rgba(14,22,36,.99));border:1px solid rgba(41,128,185,.2);padding:.85rem .8rem;position:relative;overflow:hidden;text-align:center;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,#2980b9,#5dade2,#2980b9);opacity:.55;"></div>
+            <div style="font-size:1.6rem;margin-bottom:.4rem;">🅿️</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.72rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">
+              <span class="txt-ar">موقف مجاني</span>
+              <span class="txt-fr">Parking Gratuit</span>
+              <span class="txt-en">Free Parking</span>
+            </div>
+            <div style="font-size:.65rem;color:var(--text3);line-height:1.45;margin-bottom:.4rem;">
+              <span class="txt-ar">موقف سيارات خاص ومؤمَّن مجاني طوال مدة الإقامة</span>
+              <span class="txt-fr">Parking privé et sécurisé, gratuit tout au long du séjour</span>
+              <span class="txt-en">Private secured parking free throughout your stay</span>
+            </div>
+            <div style="display:inline-flex;align-items:center;gap:.25rem;padding:.18rem .5rem;background:rgba(41,128,185,.08);border:1px solid rgba(41,128,185,.22);font-size:.57rem;font-family:'Lato',sans-serif;letter-spacing:.07em;color:#5dade2;">
+              ✦ مجاني / Gratuit
+            </div>
+          </div>
+
         </div>
-        <div class="rule-item">
-          <span class="ri-icon">🏛️</span>
-          <span class="ri-text">
-            <span class="txt-ar">استقبال يعمل 24/24</span>
-            <span class="txt-fr">Réception ouverte 24h/24</span>
-            <span class="txt-en">Reception open 24 hours</span>
-          </span>
+
+        <!-- row 2: 3 cols -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.55rem;margin-bottom:.55rem;">
+
+          <!-- خدمة الغرف -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.97),rgba(14,22,36,.99));border:1px solid rgba(232,149,90,.2);padding:.85rem .8rem;position:relative;overflow:hidden;text-align:center;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,#e8955a,#f0b060,#e8955a);opacity:.55;"></div>
+            <div style="font-size:1.6rem;margin-bottom:.4rem;">🍽️</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.72rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">
+              <span class="txt-ar">خدمة الغرف</span>
+              <span class="txt-fr">Room Service</span>
+              <span class="txt-en">Room Service</span>
+            </div>
+            <div style="font-size:.65rem;color:var(--text3);line-height:1.45;margin-bottom:.4rem;">
+              <span class="txt-ar">وجباتكم المفضلة تصل إلى غرفتكم خلال أوقات المطعم</span>
+              <span class="txt-fr">Vos repas favoris livrés en chambre durant les heures du restaurant</span>
+              <span class="txt-en">Your favourite meals delivered to your room during restaurant hours</span>
+            </div>
+            <div style="display:inline-flex;align-items:center;gap:.25rem;padding:.18rem .5rem;background:rgba(232,149,90,.08);border:1px solid rgba(232,149,90,.22);font-size:.57rem;font-family:'Lato',sans-serif;letter-spacing:.07em;color:#e8955a;">
+              📞 141
+            </div>
+          </div>
+
+          <!-- غسيل الملابس -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.97),rgba(14,22,36,.99));border:1px solid rgba(26,122,138,.22);padding:.85rem .8rem;position:relative;overflow:hidden;text-align:center;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,var(--teal),var(--teal2),var(--teal));opacity:.55;"></div>
+            <div style="font-size:1.6rem;margin-bottom:.4rem;">👕</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.72rem;font-weight:700;color:var(--text);margin-bottom:.25rem;">
+              <span class="txt-ar">غسيل الملابس</span>
+              <span class="txt-fr">Blanchisserie</span>
+              <span class="txt-en">Laundry</span>
+            </div>
+            <div style="font-size:.65rem;color:var(--text3);line-height:1.45;margin-bottom:.4rem;">
+              <span class="txt-ar">خدمة غسيل وكي الملابس — اطلع على قائمة الأسعار المتاحة</span>
+              <span class="txt-fr">Lavage et repassage — consultez la liste des tarifs disponible</span>
+              <span class="txt-en">Washing and ironing service — see the available price list</span>
+            </div>
+            <div style="display:inline-flex;align-items:center;gap:.25rem;padding:.18rem .5rem;background:rgba(26,122,138,.1);border:1px solid rgba(34,160,180,.22);font-size:.57rem;font-family:'Lato',sans-serif;letter-spacing:.07em;color:var(--teal2);">
+              📋 <span class="txt-ar">قائمة الأسعار</span><span class="txt-fr">Voir tarifs</span><span class="txt-en">Price list</span>
+            </div>
+          </div>
+
+          <!-- واي فاي -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.97),rgba(14,22,36,.99));border:1px solid rgba(142,68,173,.25);padding:.85rem .8rem;position:relative;overflow:hidden;text-align:center;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,#8e44ad,#a569bd,#8e44ad);opacity:.6;"></div>
+            <div style="font-size:1.6rem;margin-bottom:.4rem;">📶</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.72rem;font-weight:700;color:var(--text);margin-bottom:.22rem;">
+              <span class="txt-ar">إنترنت مجاني</span>
+              <span class="txt-fr">Wi-Fi Gratuit</span>
+              <span class="txt-en">Free Wi-Fi</span>
+            </div>
+            <div style="font-size:.65rem;color:var(--text3);line-height:1.45;margin-bottom:.55rem;">
+              <span class="txt-ar">تغطية كاملة في جميع أرجاء الفندق</span>
+              <span class="txt-fr">Couverture complète dans tout l'hôtel</span>
+              <span class="txt-en">Full coverage throughout the hotel</span>
+            </div>
+            <!-- password display + copy -->
+            <div style="background:rgba(142,68,173,.08);border:1px solid rgba(142,68,173,.3);padding:.5rem .65rem;margin-bottom:.35rem;display:flex;align-items:center;justify-content:space-between;gap:.5rem;">
+              <div style="text-align:right;">
+                <div style="font-size:.52rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(165,105,189,.7);font-family:'Lato',sans-serif;margin-bottom:.15rem;">
+                  <span class="txt-ar">كلمة المرور</span><span class="txt-fr">Mot de passe</span><span class="txt-en">Password</span>
+                </div>
+                <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:700;color:#c39bd3;letter-spacing:.08em;" dir="ltr" id="svc-wifi-pass">skikda21</div>
+              </div>
+              <button onclick="copySvcWifi()" id="svc-copy-btn" style="flex-shrink:0;background:rgba(142,68,173,.18);border:1px solid rgba(165,105,189,.4);color:#a569bd;padding:.35rem .7rem;font-family:'Lato',sans-serif;font-size:.6rem;font-weight:700;cursor:pointer;letter-spacing:.06em;transition:all .2s;">
+                <span class="txt-ar">نسخ</span><span class="txt-fr">Copier</span><span class="txt-en">Copy</span>
+              </button>
+            </div>
+          </div>
+
         </div>
-        <div class="rule-item">
-          <span class="ri-icon">🍽️</span>
-          <span class="ri-text">
-            <span class="txt-ar">خدمة الغرف خلال أوقات المطعم</span>
-            <span class="txt-fr">Service en chambre pendant les horaires du restaurant</span>
-            <span class="txt-en">Room service during restaurant hours</span>
-          </span>
+
+        <!-- row 3: 2 large cards -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.55rem;margin-bottom:.8rem;">
+
+          <!-- إيقاظ صباحي -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.97),rgba(14,22,36,.99));border:1px solid rgba(201,168,76,.2);padding:1rem;position:relative;overflow:hidden;display:flex;align-items:center;gap:.8rem;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold-d),var(--gold-l),var(--gold-d));opacity:.45;"></div>
+            <div style="font-size:1.8rem;flex-shrink:0;">⏰</div>
+            <div>
+              <div style="font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;color:var(--text);margin-bottom:.2rem;">
+                <span class="txt-ar">إيقاظ صباحي</span>
+                <span class="txt-fr">Réveil Matinal</span>
+                <span class="txt-en">Wake-Up Call</span>
+              </div>
+              <div style="font-size:.67rem;color:var(--text3);line-height:1.5;margin-bottom:.35rem;">
+                <span class="txt-ar">أبلغ الاستقبال بالوقت المناسب وسنتكفل بإيقاظكم</span>
+                <span class="txt-fr">Informez la réception de l'heure souhaitée et nous nous en chargeons</span>
+                <span class="txt-en">Inform reception of your desired time and we will wake you</span>
+              </div>
+              <div style="display:inline-flex;align-items:center;gap:.25rem;padding:.18rem .5rem;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.22);font-size:.57rem;font-family:'Lato',sans-serif;letter-spacing:.07em;color:var(--gold);">
+                📞 <span class="txt-ar">اتصل على 9</span><span class="txt-fr">Composez le 9</span><span class="txt-en">Dial 9</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- طلبات خاصة -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.97),rgba(14,22,36,.99));border:1px solid rgba(201,168,76,.2);padding:1rem;position:relative;overflow:hidden;display:flex;align-items:center;gap:.8rem;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold-d),var(--gold-l),var(--gold-d));opacity:.45;"></div>
+            <div style="font-size:1.8rem;flex-shrink:0;">🎯</div>
+            <div>
+              <div style="font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;color:var(--text);margin-bottom:.2rem;">
+                <span class="txt-ar">طلبات خاصة</span>
+                <span class="txt-fr">Demandes Spéciales</span>
+                <span class="txt-en">Special Requests</span>
+              </div>
+              <div style="font-size:.67rem;color:var(--text3);line-height:1.5;margin-bottom:.35rem;">
+                <span class="txt-ar">وسائد إضافية، مناشف، أو أي طلب خاص — نحن هنا لتلبية احتياجاتكم</span>
+                <span class="txt-fr">Oreillers supplémentaires, serviettes ou toute demande particulière — nous sommes là pour vous</span>
+                <span class="txt-en">Extra pillows, towels, or any special need — we are here for you</span>
+              </div>
+              <div style="display:inline-flex;align-items:center;gap:.25rem;padding:.18rem .5rem;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.22);font-size:.57rem;font-family:'Lato',sans-serif;letter-spacing:.07em;color:var(--gold);">
+                📞 <span class="txt-ar">اتصل على 9</span><span class="txt-fr">Composez le 9</span><span class="txt-en">Dial 9</span>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="rule-item">
-          <span class="ri-icon">🅿️</span>
-          <span class="ri-text">
-            <span class="txt-ar">موقف سيارات مجاني</span>
-            <span class="txt-fr">Parking gratuit</span>
-            <span class="txt-en">Free parking</span>
-          </span>
+
+        <!-- guarantee strip -->
+        <div style="display:flex;align-items:center;gap:.8rem;padding:.85rem 1rem;background:linear-gradient(135deg,rgba(201,168,76,.07),rgba(154,117,48,.04));border:1px solid rgba(201,168,76,.22);">
+          <span style="font-size:1.2rem;flex-shrink:0;">🏅</span>
+          <div style="font-size:.76rem;color:var(--text2);line-height:1.6;font-family:'Cormorant Garamond',serif;font-style:italic;">
+            <span class="txt-ar">التزامنا بتقديم خدمة استثنائية لكل نزيل — رضاكم مسؤوليتنا ومعيار نجاحنا</span>
+            <span class="txt-fr">Notre engagement : offrir un service exceptionnel à chaque client — votre satisfaction est notre responsabilité et notre mesure de succès</span>
+            <span class="txt-en">Our commitment: delivering exceptional service to every guest — your satisfaction is our responsibility and our measure of success</span>
+          </div>
         </div>
+
       </div>
     </div>
-
     <!-- ⑧ الأمن والسلامة -->
-    <div class="rules-section">
+    <div class="rules-section open">
       <div class="rs-head" onclick="toggleSection(this)">
         <div class="rs-icon">🛡️</div>
         <div class="rs-title">
           <span class="txt-ar">الأمن والسلامة</span>
-          <span class="txt-fr">Sécurité</span>
+          <span class="txt-fr">Sécurité & Sûreté</span>
           <span class="txt-en">Safety & Security</span>
         </div>
         <span class="rs-arrow">▼</span>
       </div>
       <div class="rs-body">
-        <div class="rule-item">
-          <span class="ri-icon">⚠️</span>
-          <span class="ri-text">
-            <span class="txt-ar">يمنع استعمال المكواة داخل الغرفة</span>
-            <span class="txt-fr">L'utilisation du fer à repasser dans la chambre est interdite</span>
-            <span class="txt-en">The use of irons inside the room is strictly prohibited</span>
-          </span>
+
+        <!-- alert banner -->
+        <div style="display:flex;align-items:center;gap:.8rem;padding:.8rem 1rem;margin-bottom:1.1rem;background:rgba(192,57,43,.07);border:1px solid rgba(192,57,43,.25);border-right:3px solid #c0392b;">
+          <span style="font-size:1.1rem;flex-shrink:0;">🚨</span>
+          <div style="font-size:.78rem;color:rgba(230,120,110,.9);line-height:1.6;font-family:'Cormorant Garamond',serif;font-style:italic;">
+            <span class="txt-ar">سلامتكم أولويتنا — يُرجى قراءة تعليمات السلامة التالية بعناية وإبلاغ الاستقبال فور ملاحظة أي خطر</span>
+            <span class="txt-fr">Votre sécurité est notre priorité — veuillez lire attentivement ces consignes et signaler tout danger à la réception</span>
+            <span class="txt-en">Your safety is our priority — please read these instructions carefully and report any hazard to reception immediately</span>
+          </div>
         </div>
-        <div class="rule-item">
-          <span class="ri-icon">🚨</span>
-          <span class="ri-text">
-            <span class="txt-ar">مخارج الطوارئ في نهاية الممر</span>
-            <span class="txt-fr">Les sorties de secours se trouvent au bout du couloir</span>
-            <span class="txt-en">Emergency exits are located at the end of the corridor</span>
-          </span>
+
+        <!-- safety cards grid -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:.8rem;">
+
+          <!-- مخارج الطوارئ -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.95),rgba(14,22,36,.98));border:1px solid rgba(192,57,43,.28);padding:.9rem;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,#c0392b,#e74c3c,#c0392b);opacity:.7;"></div>
+            <div style="font-size:1.4rem;margin-bottom:.45rem;">🚪</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.8rem;font-weight:700;color:var(--text);margin-bottom:.3rem;">
+              <span class="txt-ar">مخارج الطوارئ</span>
+              <span class="txt-fr">Sorties de Secours</span>
+              <span class="txt-en">Emergency Exits</span>
+            </div>
+            <div style="font-size:.72rem;color:var(--text3);line-height:1.55;">
+              <span class="txt-ar">توجد في نهاية كل ممر — يُرجى التعرف على أقرب مخرج لغرفتكم فور وصولكم</span>
+              <span class="txt-fr">Situées au bout de chaque couloir — repérez la sortie la plus proche de votre chambre dès votre arrivée</span>
+              <span class="txt-en">Located at the end of each corridor — locate the nearest exit to your room upon arrival</span>
+            </div>
+          </div>
+
+          <!-- المكواة محظورة -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.95),rgba(14,22,36,.98));border:1px solid rgba(192,57,43,.28);padding:.9rem;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,#c0392b,#e74c3c,#c0392b);opacity:.7;"></div>
+            <div style="font-size:1.4rem;margin-bottom:.45rem;">🚫</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.8rem;font-weight:700;color:var(--text);margin-bottom:.3rem;">
+              <span class="txt-ar">المكواة محظورة</span>
+              <span class="txt-fr">Fer à Repasser Interdit</span>
+              <span class="txt-en">No Irons Allowed</span>
+            </div>
+            <div style="font-size:.72rem;color:var(--text3);line-height:1.55;">
+              <span class="txt-ar">يُمنع استخدام المكواة داخل الغرفة — خدمة الكي متوفرة عبر الاستقبال</span>
+              <span class="txt-fr">L'utilisation du fer est interdite en chambre — service de repassage disponible via la réception</span>
+              <span class="txt-en">Irons are prohibited in rooms — ironing service available through reception</span>
+            </div>
+          </div>
+
+          <!-- كاشف الدخان -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.95),rgba(14,22,36,.98));border:1px solid rgba(201,168,76,.2);padding:.9rem;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold-d),var(--gold-l),var(--gold-d));opacity:.5;"></div>
+            <div style="font-size:1.4rem;margin-bottom:.45rem;">🔥</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.8rem;font-weight:700;color:var(--text);margin-bottom:.3rem;">
+              <span class="txt-ar">كاشف الدخان</span>
+              <span class="txt-fr">Détecteur de Fumée</span>
+              <span class="txt-en">Smoke Detector</span>
+            </div>
+            <div style="font-size:.72rem;color:var(--text3);line-height:1.55;">
+              <span class="txt-ar">الغرف مجهزة بكاشفات دخان — يُمنع تعطيلها أو التدخين بالقرب منها</span>
+              <span class="txt-fr">Les chambres sont équipées de détecteurs de fumée — ne pas les désactiver ni fumer à proximité</span>
+              <span class="txt-en">Rooms are equipped with smoke detectors — do not disable them or smoke nearby</span>
+            </div>
+          </div>
+
+          <!-- إجراءات الإخلاء -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.95),rgba(14,22,36,.98));border:1px solid rgba(201,168,76,.2);padding:.9rem;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold-d),var(--gold-l),var(--gold-d));opacity:.5;"></div>
+            <div style="font-size:1.4rem;margin-bottom:.45rem;">🏃</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.8rem;font-weight:700;color:var(--text);margin-bottom:.3rem;">
+              <span class="txt-ar">إجراءات الإخلاء</span>
+              <span class="txt-fr">Procédure d'Évacuation</span>
+              <span class="txt-en">Evacuation Procedure</span>
+            </div>
+            <div style="font-size:.72rem;color:var(--text3);line-height:1.55;">
+              <span class="txt-ar">عند سماع صفارة الإنذار اتجهوا فورًا لمخرج الطوارئ — لا تستخدموا المصعد أبدًا</span>
+              <span class="txt-fr">En cas d'alarme, dirigez-vous immédiatement vers la sortie de secours — n'utilisez jamais l'ascenseur</span>
+              <span class="txt-en">Upon hearing the alarm, head immediately to the emergency exit — never use the elevator</span>
+            </div>
+          </div>
+
+          <!-- قفل الباب -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.95),rgba(14,22,36,.98));border:1px solid rgba(201,168,76,.2);padding:.9rem;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,#2980b9,#5dade2,#2980b9);opacity:.5;"></div>
+            <div style="font-size:1.4rem;margin-bottom:.45rem;">🔐</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.8rem;font-weight:700;color:var(--text);margin-bottom:.3rem;">
+              <span class="txt-ar">أمان الغرفة</span>
+              <span class="txt-fr">Sécurité de la Chambre</span>
+              <span class="txt-en">Room Security</span>
+            </div>
+            <div style="font-size:.72rem;color:var(--text3);line-height:1.55;">
+              <span class="txt-ar">أغلق باب غرفتك دائماً بالمزلاج من الداخل — لا تفتح الباب لأشخاص مجهولين</span>
+              <span class="txt-fr">Verrouillez toujours votre porte de l'intérieur — n'ouvrez pas à des inconnus</span>
+              <span class="txt-en">Always bolt your door from inside — do not open to unknown persons</span>
+            </div>
+          </div>
+
+          <!-- الطوارئ -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.95),rgba(14,22,36,.98));border:1px solid rgba(192,57,43,.28);padding:.9rem;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,#c0392b,#e74c3c,#c0392b);opacity:.7;"></div>
+            <div style="font-size:1.4rem;margin-bottom:.45rem;">🆘</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.8rem;font-weight:700;color:var(--text);margin-bottom:.3rem;">
+              <span class="txt-ar">حالة الطوارئ</span>
+              <span class="txt-fr">Urgences</span>
+              <span class="txt-en">Emergency</span>
+            </div>
+            <div style="font-size:.72rem;color:var(--text3);line-height:1.55;">
+              <span class="txt-ar">في حالة الطوارئ اتصل بالاستقبال فورًا على الرقم <strong style="color:var(--gold-l);">9</strong> — أو اتصل بالإسعاف على <strong style="color:var(--gold-l);">14</strong></span>
+              <span class="txt-fr">En cas d'urgence contactez la réception au <strong style="color:var(--gold-l);">9</strong> — ou les secours au <strong style="color:var(--gold-l);">14</strong></span>
+              <span class="txt-en">In an emergency contact reception at <strong style="color:var(--gold-l);">9</strong> — or emergency services at <strong style="color:var(--gold-l);">14</strong></span>
+            </div>
+          </div>
+
         </div>
+
+        <!-- طفاية الحريق -->
+        <div style="display:flex;align-items:center;gap:.9rem;padding:.85rem 1rem;background:rgba(192,57,43,.05);border:1px solid rgba(192,57,43,.2);">
+          <span style="font-size:1.3rem;flex-shrink:0;">🧯</span>
+          <div style="font-size:.78rem;color:var(--text2);line-height:1.6;">
+            <strong style="color:var(--text);display:block;margin-bottom:.15rem;font-family:'Playfair Display',serif;font-size:.82rem;">
+              <span class="txt-ar">طفايات الحريق</span>
+              <span class="txt-fr">Extincteurs</span>
+              <span class="txt-en">Fire Extinguishers</span>
+            </strong>
+            <span class="txt-ar">طفايات الحريق موزّعة في كامل أرجاء الفندق — في حال اندلاع حريق يُرجى إبلاغ الاستقبال فورًا وعدم محاولة إخماده بنفسكم</span>
+            <span class="txt-fr">Des extincteurs sont répartis dans tout l'hôtel — en cas d'incendie prévenez immédiatement la réception sans tenter de l'éteindre seul</span>
+            <span class="txt-en">Fire extinguishers are distributed throughout the hotel — in case of fire notify reception immediately and do not attempt to extinguish it yourself</span>
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <!-- ⑨ التواصل مع الاستقبال -->
+    <!-- ⑨ التواصل -->
     <div class="rules-section open">
       <div class="rs-head" onclick="toggleSection(this)">
         <div class="rs-icon">📞</div>
         <div class="rs-title">
-          <span class="txt-ar">التواصل مع الاستقبال</span>
-          <span class="txt-fr">Contacter la Réception</span>
-          <span class="txt-en">Contact Reception</span>
+          <span class="txt-ar">التواصل الداخلي</span>
+          <span class="txt-fr">Communications Internes</span>
+          <span class="txt-en">Internal Communications</span>
         </div>
         <span class="rs-arrow">▼</span>
       </div>
       <div class="rs-body">
-        <div class="rule-item">
-          <span class="ri-icon">💬</span>
-          <span class="ri-text">
-            <span class="txt-ar">في حال احتجتم لأي خدمة إضافية، استفسار، أو مساعدة، يرجى عدم التردد في الاتصال بالاستقبال. نحن نوفر العديد من الخدمات ونسعد بخدمتكم في أي وقت.</span>
-            <span class="txt-fr">Pour tout service supplémentaire, renseignement ou assistance, n'hésitez pas à contacter la réception. Nous sommes à votre disposition à tout moment.</span>
-            <span class="txt-en">For any additional service, enquiry or assistance, please do not hesitate to contact reception. We are happy to serve you at any time.</span>
-          </span>
-        </div>
-        <div style="margin-top:.7rem;display:flex;align-items:center;gap:.8rem;padding:.75rem 1rem;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);">
-          <span style="font-size:1.4rem;">📟</span>
-          <div>
-            <div style="font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text3);font-family:'Lato',sans-serif;margin-bottom:.2rem;">
-              <span class="txt-ar">ارفع سماعة الهاتف واضغط</span>
-              <span class="txt-fr">Décrochez et composez le</span>
-              <span class="txt-en">Lift the handset and press</span>
+
+        <!-- intro -->
+        <p style="font-size:.82rem;color:var(--text3);line-height:1.7;margin-bottom:1.2rem;font-style:italic;font-family:'Cormorant Garamond',serif;border-right:2px solid rgba(201,168,76,.3);padding-right:.8rem;">
+          <span class="txt-ar">فريقنا في خدمتكم على مدار الساعة — ما عليكم سوى رفع سماعة الهاتف والضغط على الرقم المناسب</span>
+          <span class="txt-fr">Notre équipe est à votre disposition 24h/24 — il vous suffit de décrocher et composer le numéro souhaité</span>
+          <span class="txt-en">Our team is at your service around the clock — simply lift the handset and dial the desired number</span>
+        </p>
+
+        <!-- phone cards grid -->
+        <div style="display:flex;flex-direction:column;gap:.7rem;">
+
+          <!-- الاستقبال -->
+          <div style="
+            position:relative;overflow:hidden;
+            background:linear-gradient(135deg,rgba(20,30,48,1),rgba(14,21,32,1));
+            border:1px solid rgba(201,168,76,.35);
+            padding:1.1rem 1.2rem 1rem;
+            display:flex;align-items:center;justify-content:space-between;gap:1rem;
+          ">
+            <div style="position:absolute;top:0;left:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--gold-l),var(--gold-d));"></div>
+            <div style="position:absolute;top:-20px;right:-20px;width:80px;height:80px;border-radius:50%;background:rgba(201,168,76,.04);pointer-events:none;"></div>
+            <div style="padding-right:.4rem;">
+              <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem;">
+                <span style="font-size:1rem;">🛎️</span>
+                <span style="font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-family:'Lato',sans-serif;font-weight:700;">
+                  <span class="txt-ar">الاستقبال</span>
+                  <span class="txt-fr">Réception</span>
+                  <span class="txt-en">Reception</span>
+                </span>
+              </div>
+              <div style="font-size:.78rem;color:var(--text3);font-family:'Cormorant Garamond',serif;font-style:italic;line-height:1.5;">
+                <span class="txt-ar">للتواصل مع الاستقبال يُرجى رفع السماعة والضغط على</span>
+                <span class="txt-fr">Pour joindre la réception, décrochez et composez le</span>
+                <span class="txt-en">To reach reception, lift the handset and press</span>
+              </div>
             </div>
-            <div style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--gold-l);line-height:1;">9</div>
+            <div style="flex-shrink:0;text-align:center;min-width:58px;">
+              <div style="font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:700;line-height:1;
+                background:linear-gradient(135deg,var(--gold-l),var(--gold),var(--gold-d));
+                -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">9</div>
+            </div>
           </div>
+
+          <!-- البيتزيريا -->
+          <div style="
+            position:relative;overflow:hidden;
+            background:linear-gradient(135deg,rgba(20,30,48,1),rgba(14,21,32,1));
+            border:1px solid rgba(201,168,76,.22);
+            padding:1.1rem 1.2rem 1rem;
+            display:flex;align-items:center;justify-content:space-between;gap:1rem;
+          ">
+            <div style="position:absolute;top:0;left:0;bottom:0;width:3px;background:linear-gradient(to bottom,#e8955a,#c0642a);"></div>
+            <div style="position:absolute;top:-20px;right:-20px;width:80px;height:80px;border-radius:50%;background:rgba(232,149,90,.03);pointer-events:none;"></div>
+            <div style="padding-right:.4rem;">
+              <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem;">
+                <span style="font-size:1rem;">🍕</span>
+                <span style="font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:#e8955a;font-family:'Lato',sans-serif;font-weight:700;">
+                  <span class="txt-ar">البيتزيريا</span>
+                  <span class="txt-fr">Pizzeria</span>
+                  <span class="txt-en">Pizzeria</span>
+                </span>
+              </div>
+              <div style="font-size:.78rem;color:var(--text3);font-family:'Cormorant Garamond',serif;font-style:italic;line-height:1.5;">
+                <span class="txt-ar">للطلب والاستفسار حول ما تقدّمه البيتزيريا يرجى رفع السماعة والضغط على</span>
+                <span class="txt-fr">Pour commander ou obtenir des informations sur la pizzeria, décrochez et composez le</span>
+                <span class="txt-en">To order or enquire about the pizzeria, lift the handset and dial</span>
+              </div>
+            </div>
+            <div style="flex-shrink:0;text-align:center;min-width:58px;">
+              <div style="font-family:'Playfair Display',serif;font-size:2.1rem;font-weight:700;line-height:1;
+                background:linear-gradient(135deg,#f0a870,#e8955a,#c0642a);
+                -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">146</div>
+            </div>
+          </div>
+
+          <!-- المطعم -->
+          <div style="
+            position:relative;overflow:hidden;
+            background:linear-gradient(135deg,rgba(20,30,48,1),rgba(14,21,32,1));
+            border:1px solid rgba(201,168,76,.22);
+            padding:1.1rem 1.2rem 1rem;
+            display:flex;align-items:center;justify-content:space-between;gap:1rem;
+          ">
+            <div style="position:absolute;top:0;left:0;bottom:0;width:3px;background:linear-gradient(to bottom,#7ac9a0,#3a9d6a);"></div>
+            <div style="position:absolute;top:-20px;right:-20px;width:80px;height:80px;border-radius:50%;background:rgba(94,201,140,.03);pointer-events:none;"></div>
+            <div style="padding-right:.4rem;">
+              <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem;">
+                <span style="font-size:1rem;">🍽️</span>
+                <span style="font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:#5ec98c;font-family:'Lato',sans-serif;font-weight:700;">
+                  <span class="txt-ar">المطعم</span>
+                  <span class="txt-fr">Restaurant</span>
+                  <span class="txt-en">Restaurant</span>
+                </span>
+              </div>
+              <div style="font-size:.78rem;color:var(--text3);font-family:'Cormorant Garamond',serif;font-style:italic;line-height:1.5;">
+                <span class="txt-ar">للاتصال بالمطعم والاستفسار يرجى رفع السماعة والضغط على</span>
+                <span class="txt-fr">Pour contacter le restaurant et obtenir des renseignements, composez le</span>
+                <span class="txt-en">To contact the restaurant and make enquiries, dial</span>
+              </div>
+              <div style="display:flex;gap:.6rem;margin-top:.5rem;flex-wrap:wrap;">
+                <span style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;line-height:1;
+                  background:linear-gradient(135deg,#7ac9a0,#3a9d6a);
+                  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">141</span>
+                <span style="color:rgba(255,255,255,.15);font-size:1.4rem;line-height:1.8;">|</span>
+                <span style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;line-height:1;
+                  background:linear-gradient(135deg,#7ac9a0,#3a9d6a);
+                  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">142</span>
+              </div>
+            </div>
+            <div style="flex-shrink:0;text-align:center;">
+              <div style="font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text3);font-family:'Lato',sans-serif;margin-bottom:.2rem;">
+                <span class="txt-ar">أو</span><span class="txt-fr">ou</span><span class="txt-en">or</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -1085,33 +2016,129 @@ nav.scrolled{
     </div>
 
     <!-- ⑪ معلومات إضافية -->
-    <div class="rules-section">
+    <div class="rules-section open">
       <div class="rs-head" onclick="toggleSection(this)">
         <div class="rs-icon">💡</div>
         <div class="rs-title">
-          <span class="txt-ar">معلومات إضافية</span>
-          <span class="txt-fr">Informations Complémentaires</span>
-          <span class="txt-en">Additional Information</span>
+          <span class="txt-ar">نصائح ومعلومات مفيدة</span>
+          <span class="txt-fr">Conseils & Informations Utiles</span>
+          <span class="txt-en">Tips & Useful Information</span>
         </div>
         <span class="rs-arrow">▼</span>
       </div>
       <div class="rs-body">
-        <div class="rule-item">
-          <span class="ri-icon">🔑</span>
-          <span class="ri-text">
-            <span class="txt-ar">ضع البطاقة الإلكترونية في الحامل لتشغيل الكهرباء</span>
-            <span class="txt-fr">Insérez votre carte électronique dans le support pour activer l'électricité</span>
-            <span class="txt-en">Insert the key card into the holder to activate electricity in your room</span>
-          </span>
+
+        <!-- tip cards grid -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:.8rem;">
+
+          <!-- البطاقة الكهربائية -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.95),rgba(14,22,36,.98));border:1px solid rgba(201,168,76,.22);padding:.9rem;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold-d),var(--gold-l),var(--gold-d));opacity:.5;"></div>
+            <div style="font-size:1.5rem;margin-bottom:.5rem;">🔑</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:.3rem;">
+              <span class="txt-ar">البطاقة الكهربائية</span>
+              <span class="txt-fr">Carte Électrique</span>
+              <span class="txt-en">Key Card Power</span>
+            </div>
+            <div style="font-size:.73rem;color:var(--text3);line-height:1.5;">
+              <span class="txt-ar">ضع البطاقة الإلكترونية في الحامل بجانب الباب لتشغيل الكهرباء في الغرفة</span>
+              <span class="txt-fr">Insérez votre carte dans le support près de la porte pour alimenter la chambre en électricité</span>
+              <span class="txt-en">Insert your key card into the holder near the door to power your room</span>
+            </div>
+          </div>
+
+          <!-- توفير الطاقة -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.95),rgba(14,22,36,.98));border:1px solid rgba(201,168,76,.22);padding:.9rem;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,#3a9d6a,#5ec98c,#3a9d6a);opacity:.5;"></div>
+            <div style="font-size:1.5rem;margin-bottom:.5rem;">🌿</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:.3rem;">
+              <span class="txt-ar">توفير الطاقة</span>
+              <span class="txt-fr">Économie d'Énergie</span>
+              <span class="txt-en">Energy Saving</span>
+            </div>
+            <div style="font-size:.73rem;color:var(--text3);line-height:1.5;">
+              <span class="txt-ar">أطفئ الأنوار والمكيف قبل مغادرة الغرفة — نشكركم على المساهمة في حماية البيئة</span>
+              <span class="txt-fr">Éteignez lumières et climatisation en quittant — merci de contribuer à la protection de l'environnement</span>
+              <span class="txt-en">Turn off lights and A/C when leaving — thank you for helping protect the environment</span>
+            </div>
+          </div>
+
+          <!-- المكيف -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.95),rgba(14,22,36,.98));border:1px solid rgba(201,168,76,.22);padding:.9rem;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,#2980b9,#5dade2,#2980b9);opacity:.5;"></div>
+            <div style="font-size:1.5rem;margin-bottom:.5rem;">❄️</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:.3rem;">
+              <span class="txt-ar">تحكم المكيف</span>
+              <span class="txt-fr">Climatisation</span>
+              <span class="txt-en">Air Conditioning</span>
+            </div>
+            <div style="font-size:.73rem;color:var(--text3);line-height:1.5;">
+              <span class="txt-ar">للحصول على تكييف مثالي يُنصح بضبط درجة الحرارة بين 22 و24 درجة وإغلاق النوافذ</span>
+              <span class="txt-fr">Pour un confort optimal, réglez la température entre 22 et 24°C et maintenez les fenêtres fermées</span>
+              <span class="txt-en">For optimal comfort, set temperature between 22–24°C and keep windows closed</span>
+            </div>
+          </div>
+
+          <!-- النوم الهادئ -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.95),rgba(14,22,36,.98));border:1px solid rgba(201,168,76,.22);padding:.9rem;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,#8e44ad,#a569bd,#8e44ad);opacity:.5;"></div>
+            <div style="font-size:1.5rem;margin-bottom:.5rem;">🌙</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:.3rem;">
+              <span class="txt-ar">الهدوء والراحة</span>
+              <span class="txt-fr">Calme & Repos</span>
+              <span class="txt-en">Quiet & Rest</span>
+            </div>
+            <div style="font-size:.73rem;color:var(--text3);line-height:1.5;">
+              <span class="txt-ar">يُرجى الالتزام بالهدوء بعد الساعة 22:00 احترامًا لراحة جميع النزلاء</span>
+              <span class="txt-fr">Veuillez respecter le calme après 22h00 par égard pour l'ensemble des clients</span>
+              <span class="txt-en">Please maintain quiet after 10:00 PM out of respect for all guests</span>
+            </div>
+          </div>
+
+          <!-- المناشف -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.95),rgba(14,22,36,.98));border:1px solid rgba(201,168,76,.22);padding:.9rem;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,var(--teal),var(--teal2),var(--teal));opacity:.5;"></div>
+            <div style="font-size:1.5rem;margin-bottom:.5rem;">🛁</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:.3rem;">
+              <span class="txt-ar">المناشف والبياضات</span>
+              <span class="txt-fr">Serviettes & Linge</span>
+              <span class="txt-en">Towels & Linen</span>
+            </div>
+            <div style="font-size:.73rem;color:var(--text3);line-height:1.5;">
+              <span class="txt-ar">المناشف الموضوعة على الأرض تُشير لرغبتكم في تبديلها — على الحامل تعني استمرار الاستخدام</span>
+              <span class="txt-fr">Les serviettes au sol seront remplacées — sur le porte-serviettes signifie réutilisation</span>
+              <span class="txt-en">Towels on the floor will be replaced — on the rack means reuse</span>
+            </div>
+          </div>
+
+          <!-- الأمتعة -->
+          <div style="background:linear-gradient(160deg,rgba(22,34,52,.95),rgba(14,22,36,.98));border:1px solid rgba(201,168,76,.22);padding:.9rem;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,#e8955a,#f0b060,#e8955a);opacity:.5;"></div>
+            <div style="font-size:1.5rem;margin-bottom:.5rem;">🧳</div>
+            <div style="font-family:'Playfair Display',serif;font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:.3rem;">
+              <span class="txt-ar">الأمتعة عند المغادرة</span>
+              <span class="txt-fr">Bagages au Départ</span>
+              <span class="txt-en">Luggage at Checkout</span>
+            </div>
+            <div style="font-size:.73rem;color:var(--text3);line-height:1.5;">
+              <span class="txt-ar">يمكن إيداع أمتعتكم لدى الاستقبال بعد تسليم الغرفة ريثما يحين موعد مغادرتكم</span>
+              <span class="txt-fr">Vous pouvez déposer vos bagages à la réception après le check-out jusqu'à votre départ</span>
+              <span class="txt-en">You may leave your luggage at reception after check-out until your departure time</span>
+            </div>
+          </div>
+
         </div>
-        <div class="rule-item">
-          <span class="ri-icon">🌙</span>
-          <span class="ri-text">
-            <span class="txt-ar">أطفئ الأنوار والمكيف قبل الخروج</span>
-            <span class="txt-fr">Éteignez les lumières et la climatisation avant de quitter la chambre</span>
-            <span class="txt-en">Turn off the lights and air conditioning before leaving the room</span>
-          </span>
+
+        <!-- إشعار خاص بالنظافة -->
+        <div style="display:flex;align-items:flex-start;gap:.8rem;padding:.85rem 1rem;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.18);border-right:3px solid var(--gold);">
+          <span style="font-size:1.1rem;flex-shrink:0;margin-top:.05rem;">✨</span>
+          <div style="font-size:.78rem;color:var(--text2);line-height:1.6;font-family:'Cormorant Garamond',serif;font-style:italic;">
+            <span class="txt-ar">يسعدنا في فندق المنظر الجميل تقديم أفضل مستوى من الخدمة لضمان راحتكم التامة. في حال وجود أي ملاحظة أو طلب خاص لا تترددوا في إبلاغ فريقنا.</span>
+            <span class="txt-fr">À l'Hôtel Belle Vue, nous mettons tout en œuvre pour assurer votre confort total. Pour toute remarque ou demande particulière, n'hésitez pas à en informer notre équipe.</span>
+            <span class="txt-en">At Hotel Belle Vue, we strive to provide the highest level of service for your complete comfort. For any remark or special request, please do not hesitate to inform our team.</span>
+          </div>
         </div>
+
       </div>
     </div>
 
@@ -1161,6 +2188,19 @@ function setLang(lang, e) {
 function toggleSection(head){
   const sec = head.closest('.rules-section');
   sec.classList.toggle('open');
+}
+
+function copySvcWifi(){
+  const pass = document.getElementById('svc-wifi-pass').textContent.trim();
+  const btn  = document.getElementById('svc-copy-btn');
+  navigator.clipboard.writeText(pass).then(()=>{
+    const orig = btn.innerHTML;
+    btn.innerHTML = '✓';
+    btn.style.color = 'var(--green-l)';
+    btn.style.borderColor = 'rgba(94,201,140,.5)';
+    btn.style.background = 'rgba(94,201,140,.12)';
+    setTimeout(()=>{ btn.innerHTML=orig; btn.style.color=''; btn.style.borderColor=''; btn.style.background=''; }, 2200);
+  }).catch(()=>{});
 }
 
 function copyWifi(){
@@ -1473,7 +2513,7 @@ function attachOrientation(){
     <!-- gender tabs -->
     <div class="gender-tabs">
       <button class="gtab active" id="gtab-men" onclick="switchGender('men')">
-        <span>👔</span>
+        <span>🩳</span>
         <span class="txt-ar">رجال</span><span class="txt-fr">Hommes</span><span class="txt-en">Men</span>
       </button>
       <button class="gtab" id="gtab-women" onclick="switchGender('women')">
